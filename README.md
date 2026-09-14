@@ -1,8 +1,6 @@
 # Arova Chrome 插件下载
 
-[查看所有版本并下载](https://github.com/spencer17x/arova-releases/releases)
-
-[下载 v0.0.1-beta.0](https://github.com/spencer17x/arova-releases/releases/tag/v0.0.1-beta.0)
+[下载最新版与历史版本](https://github.com/spencer17x/arova-releases/releases)
 
 这是 Arova 官方公开下载仓库，用于分发编译后的 Chrome 插件安装包、SHA256 校验文件与版本信息。无需取得私有开发仓库权限，也无需从 Chrome 商店下载。
 
