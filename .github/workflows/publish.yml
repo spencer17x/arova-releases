@@ -53,7 +53,7 @@ jobs:
           assert set(request)=={'operation','tag'} and request['tag']==tag
           base={'README.md','LICENSE','.github/workflows/publish.yml','.release-request.json'}
           files=set(subprocess.check_output(['git','ls-files'],text=True).splitlines())
-          base |= files & {'FEATURES.md','USAGE.md'}
+          base |= files & {'FEATURES.md','USAGE.md','README.zh-CN.md','FEATURES.zh-CN.md','USAGE.zh-CN.md'}
           # Distribution tags have no source repository ancestors.
           commit_headers=subprocess.check_output(['git','cat-file','-p','HEAD'],text=True).split('\n\n',1)[0]
           assert not any(line.startswith('parent ') for line in commit_headers.splitlines())
@@ -92,11 +92,14 @@ jobs:
               assert b'LicenseRef-Arova-Proprietary' in z.read('LICENSE') and len(z.read('THIRD_PARTY_NOTICES.txt'))>100
           wanted={n:'sha256:'+hashlib.sha256((folder/n).read_bytes()).hexdigest() for n in names}
           notes=(f'# Arova Chrome {tag}\n\n'
-                 f'[功能介绍](https://github.com/{repo}/blob/main/FEATURES.md) · [使用指南](https://github.com/{repo}/blob/main/USAGE.md)\n\n'
+                 f'[Features](https://github.com/{repo}/blob/main/FEATURES.md) · [User guide](https://github.com/{repo}/blob/main/USAGE.md) · [功能介绍](https://github.com/{repo}/blob/main/FEATURES.zh-CN.md) · [使用指南](https://github.com/{repo}/blob/main/USAGE.zh-CN.md)\n\n'
+                 f'Download `{name}`, extract it, enable Developer mode at `chrome://extensions`, then choose **Load unpacked**.\n\n'
+                 'To update, replace the original folder contents, reload the extension, and refresh trading pages. GitHub packages do not update automatically.\n\n'
                  f'下载 `{name}`，解压后在 `chrome://extensions` 开启开发者模式，选择“加载已解压的扩展程序”。\n\n'
                  '更新时替换原加载目录并点击“重新加载”，然后刷新交易页。GitHub ZIP 不会自动更新已安装的插件。\n\n'
-                 f'版本：`{info["version"]}` · 扩展 ID：`{info["extension_id"]}`\n\n'
-                 f'构建标识：`{info["commit"]}`\n\nSHA256：`{digest}`\n\n'
+                 f'Version / 版本：`{info["version"]}` · Extension ID：`{info["extension_id"]}`\n\n'
+                 f'Build / 构建标识：`{info["commit"]}`\n\nSHA256：`{digest}`\n\n'
+                 'Official builds use the Arova proprietary commercial license; third-party notices are included. Public downloads do not make the application open source.\n\n'
                  '官方构建采用 Arova 专有商业许可；第三方许可证保留在安装包中。公开下载不代表项目开源。')
           Path('public-notes.md').write_text(notes)
           if release and not release['draft'] and {a['name']:a.get('digest') for a in release['assets']}==wanted:

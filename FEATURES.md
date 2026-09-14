@@ -1,63 +1,66 @@
-# Arova 功能介绍
+# Arova features
 
-适用：当前公开 Beta 版本。更新：2026-09-14。
+**English** | [简体中文](FEATURES.zh-CN.md)
 
-[下载插件](https://github.com/spencer17x/arova-releases/releases) · [使用指南](USAGE.md) · [返回首页](README.md)
+Applies to the current public beta. Updated: 2026-09-14.
 
-Arova 将 Fomo、Pump 等来源的动态集中展示在交易页面，并支持浏览器及 Telegram 提醒，方便识别关注账号、查看相关代币和回到原始内容。
+[Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
-## 支持的平台与动态
+Arova brings activity from Fomo, Pump, and other configured sources to trading pages, with browser and Telegram alerts to help you recognize followed accounts, inspect associated tokens, and return to the original content.
 
-浮窗支持 **XXYY、GMGN、DeBot** 的已支持交易页面。账号和通知等配置在插件独立管理页完成。
+## Platforms and activity
 
-| 视图 | 内容 | 使用场景 |
+The panel appears on supported **XXYY, GMGN, and DeBot** trading pages. Account and notification settings live in the extension's standalone settings page.
+
+| View | Content | Purpose |
 | --- | --- | --- |
-| 关注动态 | Fomo Alerts、Pump Friends，以及已配置的 Telegram 入站消息 | 跟踪已授权平台账号关注的动态 |
-| 平台动态 | Fomo Feed、Pump 平台首页动态 | 浏览平台范围的信息，内容不等于个人关注列表 |
-| Pump Top | Pump 提供的榜单/排名信息 | 查看平台榜单；不是 Arova 自有评分 |
+| Following | Fomo Alerts, Pump Friends, and configured Telegram inbound messages | Track activity associated with connected accounts' follows |
+| Platform activity | Fomo Feed and Pump platform home-feed activity | Browse platform-wide information; this is not a personal following list |
+| Pump Top | Rankings supplied by Pump | View the platform leaderboard; this is not an Arova score |
 
-数据来自第三方平台，授权、平台响应和网络状态都会影响可用性。Arova 不保证完整历史或每条消息即时到达。
+Data comes from third-party platforms. Authorization, provider responses, and network conditions affect availability. Arova does not guarantee complete history or instant delivery of every message.
 
-## 主要功能
+## Main capabilities
 
-| 功能 | 可以做什么 |
+| Feature | What it does |
 | --- | --- |
-| 独立管理页 | 管理登录身份、监控来源、通知、持续监控、显示偏好与主题 |
-| 账号登录与绑定 | 邮箱密码、Google、Telegram、Solana 钱包及 EVM 钱包入口；第三方可用性以当前服务配置为准 |
-| Fomo / Pump 授权 | 两个平台分别连接、暂停监控或撤销，状态与后续输入在对应模块展示 |
-| 自动续期 | 选择浏览器续期或服务端续期，查看状态与有效期；服务端模式需要额外材料和明确同意 |
-| 账号备注 | 查看真实关注名单、搜索平台用户并识别关注状态，为账号添加自己的备注，跳转平台用户页 |
-| 通知浮窗 | 按来源、视图和当前代币筛选，查看原文、复制合约并跳转交易页面 |
-| 快捷开关 | 浮窗内调整浏览器通知、Telegram 总通知及代币信息卡显示 |
-| Telegram 多目标推送 | 每个群组/频道独立设置来源、类型、备注显示，独立保存与测试 |
-| 持续监控 | 按链和合约维护关注代币列表；收到的内容仍取决于来源授权和通知规则 |
-| 外观与本机偏好 | 主题、浮窗开关、尺寸、按站点记忆位置等 |
-| 方案与使用权 | 查看服务端权益、可用方案和订单状态；启用付费后可通过独立收银台付款 |
+| English and Chinese | Interface follows the browser, with a manual English / Simplified Chinese choice; each Telegram destination chooses its own language |
+| Standalone settings | Manage sign-in identities, connections, notifications, watchlists, display preferences, and themes |
+| Sign-in and linking | Email/password, Google, Telegram, Solana wallet, and EVM wallet entry points; availability depends on the service configuration |
+| Fomo / Pump connections | Connect, pause, or revoke each provider separately; status and follow-up inputs appear in that provider's section |
+| Renewal | Choose browser or server renewal and inspect status / expiry; server renewal requires extra credentials and explicit consent |
+| Account notes | Read actual follows, search platform accounts and their follow status, add private notes, and open user profiles |
+| Notification panel | Filter by source, view, and current token; open originals, copy contracts, and open trading pages |
+| Quick switches | Toggle browser alerts, the Telegram master switch, and the token info card from the panel |
+| Telegram destinations | Configure sources, categories, note visibility, and language per group / channel; save and test independently |
+| Watchlist | Maintain tokens by chain and contract; received activity still depends on provider access and notification rules |
+| Appearance and device preferences | Themes, panel visibility and size, and per-site position memory |
+| Plans and access | View access, available plans, and orders; when paid access is enabled, pay through a separate checkout page |
 
-账号列表和备注默认每页 **10 条**，可选 10 / 20 / 50 / 100 条；订单记录每页 10 条。
+Account lists and notes default to **10 rows per page**, with 10 / 20 / 50 / 100 options. Order history uses 10 rows per page.
 
-## 三种设置的区别
+## Settings have different scopes
 
-| 设置 | 影响范围 |
+| Setting | Scope |
 | --- | --- |
-| 浮窗开关、主题、位置、代币信息卡 | 当前浏览器的展示方式；关闭浮窗不会停止服务端监控或 Telegram 推送 |
-| 浏览器通知 | 桌面提醒，还受到 Chrome 与操作系统通知权限影响 |
-| Telegram 目标规则 | 对应群组/频道的推送内容；与浮窗筛选和浏览器提醒独立 |
+| Panel visibility, theme, position, token card, interface language | Display on this browser; closing the panel does not stop server monitoring or Telegram alerts |
+| Browser alerts | Desktop notifications, subject to Chrome and operating system permissions |
+| Telegram destination rules and language | Content sent to that group / channel, independent of panel filters and browser alerts |
 
-备注属于当前 Arova 用户，不会修改平台原昵称或关注关系。Telegram 每个目标可选择是否展示这些备注，已发出的历史消息不会因此重写。
+Notes belong to the current Arova user and do not change platform names or follow relationships. Each Telegram destination can show or hide them. Changes do not rewrite previously sent messages. Source posts, names, notes, token names, and administrator-written plan descriptions retain their original language.
 
-## 服务使用权
+## Service access
 
-“方案与使用权”展示当前免费状态、有效期、永久权益或暂停状态。运营者可以赠送时长或授予无限期权益，付款和人工分配后的状态由服务端统一更新。
+**Plans & access** shows free mode, expiry, permanent access, or suspension. Operators can grant time or unlimited access. Payments and manual grants are reflected by the server.
 
-显示免费开放时无需购买。金额、时长、支付网络及稳定币以实际可用方案和收银台为准；没有可用方案时不能发起付款。无限期权益没有到期时间，但仍可由超级管理员调整或暂停。
+No purchase is needed while access is free. Prices, durations, networks, and stablecoins depend on available plans and checkout. Payment cannot start without an available plan. Permanent access has no expiry but can still be changed or suspended by a super administrator.
 
-普通用户的插件管理页与内部管理后台不同。购买方案或获得无限期权益不会自动获得管理员权限。
+The user's extension settings page is separate from the internal administration console. Buying a plan or receiving permanent access does not grant administrator permissions.
 
-## 当前范围与授权边界
+## Scope and authorization boundaries
 
-- 当前版本用于监控和提醒，不提供自动买卖、Swap、跟单执行或 Arova 自有 Alpha Score / 回测。
-- 平台动态、观点和排名不代表收益承诺，应结合时间、来源及原文自行判断。
-- Arova 钱包登录用于证明登录身份，与 Pump 服务端密钥托管是不同操作。
-- 服务端续期属于实验性功能。Fomo 长期会话、Pump 完整 Solana 私钥均不是只读授权；请先阅读[续期说明](USAGE.md#选择自动续期方式)。
-- 公开仓库分发官方构建与文档，业务源码仍私有，许可见 [LICENSE](LICENSE)。
+- This version provides monitoring and alerts, not automated buying / selling, swaps, copy trading, or an Arova Alpha Score / backtest.
+- Platform activity, opinions, and rankings are not promises of returns. Consider the timestamp, source, and original content.
+- Arova wallet sign-in proves identity. It is separate from Pump server key custody.
+- Server renewal is experimental. Fomo long-lived sessions and full Pump Solana private keys are not read-only access. Read [Renewal methods](USAGE.md#renewal-methods) first.
+- This public repository distributes official builds and documentation. Application source remains private; see [LICENSE](LICENSE).

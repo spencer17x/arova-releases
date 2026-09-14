@@ -1,48 +1,52 @@
-# Arova Chrome 插件下载
+# Arova Chrome downloads
 
-[下载最新版与历史版本](https://github.com/spencer17x/arova-releases/releases)
+**English** | [简体中文](README.zh-CN.md)
 
-[功能介绍](FEATURES.md) · [完整使用指南](USAGE.md)
+[Download current and previous versions](https://github.com/spencer17x/arova-releases/releases)
 
-这是 Arova 官方公开下载仓库，用于分发编译后的 Chrome 插件安装包、SHA256 校验文件与版本信息。无需取得私有开发仓库权限，也无需从 Chrome 商店下载。
+[Features](FEATURES.md) · [User guide](USAGE.md)
 
-Arova 将 Fomo / Pump 动态集中到 XXYY、GMGN、DeBot 等支持的交易页面，提供账号备注、浏览器提醒和 Telegram 多目标通知。配置在插件独立管理页完成，浮窗用于查看通知与快捷操作。
+This is Arova's official public download repository. It distributes compiled Chrome extension packages, SHA256 checksums, and release information. You do not need access to the private development repository or the Chrome Web Store.
 
-## 从这里开始
+Arova brings Fomo / Pump activity to supported XXYY, GMGN, and DeBot trading pages, with private account notes, browser alerts, and Telegram notifications to multiple destinations. Configure your account in the standalone settings page; use the floating panel to view alerts and quick controls.
 
-| 想做什么 | 查看文档 |
+The extension supports English and Simplified Chinese. It follows the browser language by default, with a manual override in the settings sidebar. Each Telegram destination has its own alert language.
+
+## Start here
+
+| Task | Documentation |
 | --- | --- |
-| 了解支持的平台与能力 | [功能介绍](FEATURES.md) |
-| 安装或更新插件 | [安装与更新](USAGE.md#安装与更新) |
-| 完成第一次配置 | [首次上手](USAGE.md#首次上手) |
-| 连接 Fomo / Pump，选择续期方式 | [监控授权](USAGE.md#连接监控来源)、[自动续期](USAGE.md#选择自动续期方式) |
-| 设置 TG 群组/频道推送 | [Telegram 通知](USAGE.md#telegram-通知) |
-| 查看付费、赠送或永久权益 | [方案与使用权](USAGE.md#方案与使用权) |
-| 处理加载、登录或通知问题 | [常见问题](USAGE.md#常见问题) |
+| Explore supported platforms and capabilities | [Features](FEATURES.md) |
+| Install or update | [Installation and updates](USAGE.md#installation-and-updates) |
+| Set up for the first time | [Quick start](USAGE.md#quick-start) |
+| Connect Fomo / Pump and choose renewal | [Connect monitoring sources](USAGE.md#connect-monitoring-sources), [Renewal methods](USAGE.md#renewal-methods) |
+| Send alerts to Telegram groups / channels | [Telegram alerts](USAGE.md#telegram-alerts) |
+| Check paid, gifted, or permanent access | [Plans and access](USAGE.md#plans-and-access) |
+| Troubleshoot loading, sign-in, or alerts | [Troubleshooting](USAGE.md#troubleshooting) |
 
-## 安装与更新
+## Installation and updates
 
-1. 在 Releases 中下载 `arova-chrome-版本.zip`，解压到准备长期保留的文件夹。
-2. 打开 `chrome://extensions`，开启右上角的「开发者模式」。
-3. 点击「加载已解压的扩展程序」，选择包含 `manifest.json` 的解压目录。
-4. 点击 Arova 图标打开管理页，登录账号并完成所需配置。
+1. Download `arova-chrome-VERSION.zip` from Releases and extract it to a folder you will keep.
+2. Open `chrome://extensions` and enable **Developer mode**.
+3. Click **Load unpacked** and select the extracted folder containing `manifest.json`.
+4. Click the Arova toolbar icon to open settings, sign in, and configure the features you need.
 
-更新时，将新包替换到原加载目录，在扩展管理页点击 Arova 的「重新加载」，再刷新交易页。不要先卸载，以保留浏览器设置。GitHub 安装包不会自动更新已安装的插件。
+To update, replace the contents of the original folder with the new package, click **Reload** for Arova in Chrome extensions, then refresh your trading pages. Do not uninstall first if you want to keep browser settings. GitHub packages do not automatically update installed extensions.
 
-同名 Beta 版本可能重新构建；以 `release-info.json` 的构建标识与 `SHA256SUMS` 校验值区分新旧包。
+A beta may be rebuilt under the same version name. Compare the build identifier in `release-info.json` and the checksum in `SHA256SUMS` to distinguish builds.
 
-## 版本内容
+## Release contents
 
-- `arova-chrome-版本.zip`：官方插件安装包。
-- `SHA256SUMS`：安装包 SHA256。
-- `release-info.json`：版本、构建标识、扩展 ID、生产接口及摘要。
+- `arova-chrome-VERSION.zip`: official extension package.
+- `SHA256SUMS`: SHA256 checksum of the package.
+- `release-info.json`: version, build identifier, extension ID, production API, and checksum.
 
-固定扩展 ID：`gedflalfmklfccgaabdbcnjjchlfemfo`。
+Fixed extension ID: `gedflalfmklfccgaabdbcnjjchlfemfo`.
 
-公开 tag 记录的是分发产物快照。GitHub 自动生成的 “Source code” ZIP/TAR 只包含本公开仓库的说明、发布配置和构建产物；安装请下载 `arova-chrome-版本.zip`。
+Public tags represent distribution snapshots. GitHub's automatically generated **Source code** ZIP/TAR contains only this repository's documentation, publishing configuration, and build artifacts. Install `arova-chrome-VERSION.zip` instead.
 
-此仓库不包含 Arova 的 TypeScript / Python 业务源码、服务端代码、私有 Git 历史、环境配置或密钥。Chrome 安装包包含运行必需的编译后 JavaScript。
+This repository does not contain Arova's TypeScript / Python application source, server code, private Git history, environment configuration, or secrets. Extension packages contain the compiled JavaScript required to run.
 
-## 许可
+## License
 
-Arova 采用专有商业许可，见 [LICENSE](LICENSE)。公开下载不代表项目改为开源授权；第三方许可证与版权通知保留在安装包的 `THIRD_PARTY_NOTICES.txt` 中。账号使用权限和付费方案由 Arova 服务端决定。
+Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Public downloads do not make the application open source. Third-party licenses and copyright notices remain in the package's `THIRD_PARTY_NOTICES.txt`. Account access and available plans are controlled by the Arova server.

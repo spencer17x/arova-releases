@@ -1,165 +1,174 @@
-# Arova 使用指南
+# Arova user guide
 
-适用：当前公开 Beta 版本。更新：2026-09-14。
+**English** | [简体中文](USAGE.zh-CN.md)
 
-[功能介绍](FEATURES.md) · [下载插件](https://github.com/spencer17x/arova-releases/releases) · [返回首页](README.md)
+Applies to the current public beta. Updated: 2026-09-14.
 
-- [安装与更新](#安装与更新)
-- [首次上手](#首次上手)
-- [账号与登录](#账号与登录)
-- [连接监控来源](#连接监控来源)
-- [选择自动续期方式](#选择自动续期方式)
-- [查看浮窗与配置提醒](#查看浮窗与配置提醒)
-- [账号备注与平台搜索](#账号备注与平台搜索)
-- [Telegram 通知](#telegram-通知)
-- [持续监控](#持续监控)
-- [方案与使用权](#方案与使用权)
-- [常见问题](#常见问题)
+[Features](FEATURES.md) · [Download](https://github.com/spencer17x/arova-releases/releases) · [Home](README.md)
 
-## 安装与更新
+- [Installation and updates](#installation-and-updates)
+- [Language settings](#language-settings)
+- [Quick start](#quick-start)
+- [Account and sign-in](#account-and-sign-in)
+- [Connect monitoring sources](#connect-monitoring-sources)
+- [Renewal methods](#renewal-methods)
+- [Panel and browser alerts](#panel-and-browser-alerts)
+- [Account notes and platform search](#account-notes-and-platform-search)
+- [Telegram alerts](#telegram-alerts)
+- [Watchlist](#watchlist)
+- [Plans and access](#plans-and-access)
+- [Troubleshooting](#troubleshooting)
 
-### 首次安装
+## Installation and updates
 
-1. 打开 [Releases](https://github.com/spencer17x/arova-releases/releases)，下载所需版本的 `arova-chrome-版本.zip`。
-2. 解压到一个准备长期保留的文件夹。选择文件夹时，应能直接看到 `manifest.json`。
-3. 在 Chrome 地址栏输入 `chrome://extensions`，开启右上角“开发者模式”。
-4. 点击“加载已解压的扩展程序”，选择上一步的文件夹。
-5. 从 Chrome 的扩展菜单将 Arova 固定到工具栏，点击图标打开独立管理页。
+### First installation
 
-不要下载 GitHub 自动生成的 “Source code (zip/tar.gz)” 作为安装包，也不要直接选择尚未解压的 ZIP。[Chrome 官方加载说明](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-an-unpacked-extension)。
+1. Open [Releases](https://github.com/spencer17x/arova-releases/releases) and download `arova-chrome-VERSION.zip`.
+2. Extract it to a folder you will keep. The selected folder must directly contain `manifest.json`.
+3. Enter `chrome://extensions` in Chrome and enable **Developer mode**.
+4. Click **Load unpacked** and select the extracted folder.
+5. Pin Arova through Chrome's extensions menu, then click its toolbar icon to open standalone settings.
 
-### 更新已安装版本
+Do not use GitHub's automatically generated **Source code (zip/tar.gz)** archive as the installation package, or select an unextracted ZIP. See [Chrome's official loading instructions](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-an-unpacked-extension).
 
-1. 从 Releases 重新下载新安装包，即使版本名与之前相同。
-2. 将新包内容替换到原加载目录，保留原目录位置。
-3. 在 `chrome://extensions` 中找到 Arova，点击“重新加载”。
-4. 刷新已打开的交易页面；管理页如仍显示旧内容，也重新打开或刷新。
+### Updating an installed version
 
-不要先卸载，以保留浏览器设置。GitHub ZIP 不会自动升级已安装的扩展。不要删除仍被 Chrome 加载的文件夹。
+1. Download the new package, even if its version name has not changed.
+2. Replace the contents of the original loaded folder, keeping its location.
+3. Find Arova in `chrome://extensions` and click **Reload**.
+4. Refresh open trading pages. Reopen or refresh settings if it still shows the old interface.
 
-同名 Beta 重发时，文件名和版本号可能不变；以 Release 说明、`release-info.json` 的构建标识和 `SHA256SUMS` 区分新旧包。
+Do not uninstall first if you want to keep browser settings. GitHub ZIP packages do not update installed extensions automatically. Do not delete the folder while Chrome is using it.
 
-## 首次上手
+A beta may be rebuilt with the same name and version. Check the release notes, build identifier in `release-info.json`, and `SHA256SUMS` to distinguish builds.
 
-1. 安装插件并打开管理页，登录或创建 Arova 账号。
-2. 在“监控授权”分别连接需要使用的 Fomo / Pump 账号。
-3. 阅读续期说明，选择浏览器或服务端方式，完成对应确认。
-4. 在“浮窗与本机设置”开启浮窗，打开支持的 XXYY、GMGN 或 DeBot 交易页。
-5. 先查看“关注动态”，再按需要配置浏览器提醒、账号备注或 Telegram 目标。
+## Language settings
 
-管理页中的设置保存成功后会有反馈；没有新动态时显示空列表不一定代表故障，可先检查来源授权和筛选条件。
+The settings sidebar offers **Interface language → Follow browser / 简体中文 / English**. Chinese browser locales default to Simplified Chinese; other locales default to English. A manual choice is stored on this browser. Settings, open panels, connection prompts, and browser alerts follow the choice without clearing current form drafts. Wallet sign-in and checkout use the selected language when opened.
 
-## 账号与登录
+Each Telegram destination has a separate **Alert language**, applied when that destination is saved. Existing destinations default to Chinese; new destinations default to the current interface language. Changing the interface does not change group alert languages. Messages already being delivered keep their original language on retries. Source posts, account names, notes, token names, and administrator-written plan descriptions stay in their original language.
 
-在“账号与登录”使用 Arova 邮箱密码，或选择页面提供的 Google、Telegram、Solana 钱包、EVM 钱包入口。第三方方式需要在对应授权窗口完成确认，实际可用性取决于服务配置和钱包支持。
+## Quick start
 
-Arova 密码与 Google / Telegram 密码不同。使用 Google 身份时点击“使用 Google 继续”，不要把 Google 密码当作 Arova 密码填写。Google 登录应在已正式加载的 Chrome 扩展中完成。
+1. Install the extension, open settings, and sign in or create an Arova account.
+2. In **Connections**, connect the Fomo / Pump accounts you want to use.
+3. Read the renewal information, choose browser or server renewal, and complete the required confirmation.
+4. Enable the panel under **Panel & device**, then open a supported XXYY, GMGN, or DeBot trading page.
+5. Start with **Following**, then configure browser alerts, account notes, or Telegram destinations as needed.
 
-已有账号需要增加登录方式时，先登录原账号，再到“账号与登录”进行绑定，以保留同一账号的配置和备注。相同邮箱或昵称不会自动合并多个账号。
+Settings provide feedback after saving. An empty list can simply mean there is no new activity. Check connections and filters before treating it as a fault.
 
-钱包登录由本人签名确认身份，不需要向账号登录页提供私钥，也不等于授权交易或开通 Pump 服务端托管。
+## Account and sign-in
 
-## 连接监控来源
+Under **Account & login**, use your Arova email and password, or an available Google, Telegram, Solana wallet, or EVM wallet entry point. Complete confirmation in the relevant authorization window. Availability depends on the service configuration and wallet support.
 
-1. 先登录 Arova，在“监控授权”找到 Fomo 或 Pump 卡片。
-2. 点击连接入口，按提示打开对应官网并登录你自己的平台账号。
-3. 回到对应来源区域，完成插件要求的权限与授权确认。后续输入、状态和提示都在该来源模块中。
-4. 检查连接状态，再开启需要的监控与通知规则。
+Your Arova password is separate from your Google / Telegram password. To use Google, click **Continue with Google**; do not enter your Google password as an Arova password. Google sign-in must run through the installed Chrome extension.
 
-两个来源独立管理。暂停监控、撤销来源连接与关闭自动续期是不同操作，应分别核对页面中的状态。
+To add a sign-in method to an existing account, sign in to that account first and link the identity under **Account & login**. This keeps your settings and notes together. Matching emails or names do not automatically merge accounts.
 
-授权失败时先读具体提示并修改输入。若显示“结果未确认”，先读取或核对状态，不要连续重复提交。离开页面、切换账号或刷新可能丢失尚未保存的敏感材料草稿。
+Wallet sign-in uses your signature to prove identity. You do not provide a private key to the account sign-in page. Signing in does not authorize trades or enable Pump server custody.
 
-## 选择自动续期方式
+## Connect monitoring sources
 
-当前授权页面默认预选服务端方式，**预选不代表已开启托管**。两种续期方式互斥，以最终保存成功后的状态为准。
+1. Sign in to Arova and find the Fomo or Pump card under **Connections**.
+2. Click **Connect account** and sign in to your own account on the official provider page.
+3. Return to the matching provider section and complete the requested permissions and confirmation. Follow-up inputs, status, and prompts appear in that section.
+4. Check connection status, then enable the desired monitoring and notification rules.
 
-| 方式 | 运行条件 | 需要做什么 |
+Providers are managed separately. Pausing monitoring, revoking a connection, and turning off renewal are different actions; check each status.
+
+If authorization fails, read the feedback and correct your input. If the result is unconfirmed, check status before submitting again. Leaving the page, changing accounts, or reloading may discard unsaved sensitive credential drafts.
+
+## Renewal methods
+
+Server renewal is currently preselected on the authorization form. **Preselection does not activate custody.** The methods are mutually exclusive; the saved status determines which is active.
+
+| Method | Requirements | What you do |
 | --- | --- | --- |
-| 浏览器自动续期 | Chrome 运行且 Arova 已登录；官网会话需要可恢复 | 无需填写长期凭据或私钥；允许插件按需打开后台官网标签页，同步同账号短期会话 |
-| 服务端自动续期 | 由 Arova 服务端维持，Chrome 关闭后仍可工作 | 在对应来源卡片手动填写额外材料，阅读风险并明确确认；入口须由服务端开放 |
+| Automatic browser renewal | Chrome must be running, Arova signed in, and the website session recoverable | No long-lived credential or private-key entry; allow temporary background provider tabs to sync short-lived sessions for the same account |
+| Automatic server renewal | Maintained by Arova's server, including when Chrome is closed | Manually enter additional credentials in the provider card, read the risks, and explicitly confirm; the server must offer this feature |
 
-**Fomo 服务端续期**需要同一会话的 Access Token、Refresh Token，以及可选的 Privy Access Token。这些是长期会话材料，不是只读凭据。按卡片内的帮助填写；同时遵循页面关于关闭同一会话官网标签页的提示，避免并发刷新。
+**Fomo server renewal** requires the same session's Access Token, Refresh Token, and optional Privy Access Token. These are long-lived session credentials, not read-only credentials. Follow the help in the card and close website tabs sharing that session as instructed to avoid concurrent refreshes.
 
-**Pump 服务端续期**需要与已绑定账号一致的完整 Solana 私钥（Base58）。它具有钱包控制能力，不是只读授权；“用于登录、不交易”是程序限制，不会缩小私钥本身的权限。不理解材料来源或不愿托管时，可选择浏览器续期。
+**Pump server renewal** requires the full Solana private key in Base58 matching the connected account. It grants wallet control, not read-only access. “Login only, no trades” is a software restriction; it does not limit the key's actual permissions. Choose browser renewal if you do not understand the credentials or do not want custody.
 
-服务端材料会加密保存于服务和备份中。关闭 Chrome、退出 Arova 或暂停监控不会撤销托管；应使用“关闭服务端续期”或对应移除按钮。活动材料移除后，已有备份仍按保留周期过期，不能保证立即擦除。不要将 Token、私钥、助记词或验证码发送到聊天、群组或问题截图。
+Server credentials are stored encrypted on the service and in backups. Closing Chrome, signing out of Arova, or pausing monitoring does not revoke custody. Use **Turn off server renewal** or the relevant removal button. After active credentials are removed, existing backups expire according to retention rules; immediate erasure cannot be guaranteed. Never share tokens, private keys, recovery phrases, or verification codes in chats, groups, or issue screenshots.
 
-平台要求验证码、重新登录或主动撤销会话时，两种方式都可能需要人工处理。切换到浏览器续期前，应先关闭现有服务端续期，再明确开启浏览器方式。
+Either method may need your action for website verification, re-login, or session revocation. To switch to browser renewal, turn off existing server renewal first, then explicitly enable browser renewal.
 
-## 查看浮窗与配置提醒
+## Panel and browser alerts
 
-在“浮窗与本机设置”开启浮窗。它会出现在已支持的 XXYY、GMGN、DeBot 交易页面；位置、尺寸和主题可按设置调整。
+Enable the panel under **Panel & device**. It appears on supported XXYY, GMGN, and DeBot trading pages. Adjust its position, size, and theme as needed.
 
-浮窗主要用于查看通知：切换关注动态、平台动态、Pump Top，按来源及“全部代币 / 当前代币”筛选；展开消息可查看原文、复制合约或跳转对应交易页面。不同消息使用其自身合约地址。
+Use the panel to switch between Following, Platform activity, and Pump Top, and filter by source or **All tokens / Current token**. Expand messages to view originals, copy contracts, or open trading pages. Each message uses its own contract address.
 
-“代币信息卡”控制卡片显示，不会改变当前代币筛选条件。浏览器通知和 Telegram 总通知可通过浮窗快捷开关调整，详细规则仍在管理页配置。
+**Token info card** changes card visibility, not the current-token filter. Browser alerts and the Telegram master switch are available as quick controls in the panel; detailed rules stay in settings.
 
-开启浏览器提醒时还需允许 Chrome 和操作系统通知。关闭浮窗不会停止服务端监控或 Telegram 推送；关闭 Chrome 后无法继续执行浏览器续期，也不能显示浏览器桌面通知。
+Browser alerts also require Chrome and operating system notification permissions. Closing the panel does not stop server monitoring or Telegram alerts. Closing Chrome stops browser renewal and browser desktop notifications.
 
-## 账号备注与平台搜索
+## Account notes and platform search
 
-进入“账号备注”，按需求选择视图：
+Under **Account notes**, choose a view:
 
-- **我关注的**：读取当前绑定平台账号的真实关注名单。
-- **搜索平台用户**：输入账号名或地址，查询平台并标记已关注、未关注或未知。
-- **已备注**：管理自己保存的备注，包括已经取消关注的账号。
+- **My follows** reads the connected platform account's actual following list.
+- **Search platform users** queries a name or address and marks results as following, not following, or unknown.
+- **Has note** manages your saved notes, including accounts you may have unfollowed.
 
-Fomo 与 Pump 分开查询，默认每页 10 条，可选 10 / 20 / 50 / 100 条。关注关系有短时缓存，页面会显示查询时间；平台刚发生变化时可稍后重新读取。查询失败时“未知”不等于“未关注”。
+Fomo and Pump are queried separately. Pages default to 10 rows, with 10 / 20 / 50 / 100 options. Follow relationships are cached briefly and show a query time. Reload later after recent platform changes. A failed query's “unknown” status does not mean “not following.”
 
-点击账号的“添加备注 / 编辑备注”填写并保存；“用户主页”会打开对应平台页面。备注只属于你的 Arova 账号，不修改平台昵称或关注关系。关注和取消关注需到对应平台操作。
+Use **Add note / Edit note** to save a private note. **User profile** opens the platform page. Notes belong only to your Arova account and do not change platform names or follow relationships. Follow or unfollow accounts on the original platform.
 
-## Telegram 通知
+## Telegram alerts
 
-### 将通知发到群组或频道
+### Send alerts to groups or channels
 
-1. 将运营提供的 Arova 通知 Bot 加入目标群组或频道，并允许其发送消息。
-2. 可通过 Bot 的 `/chatid` 命令获取 Chat ID；填写完整返回值，包括可能存在的负号。
-3. 在“Telegram 通知”添加目标，填写群备注和 Chat ID。
-4. 选择此目标要接收的来源、通知类型，以及是否“在通知中显示我的账号备注”。
-5. 点击“保存此目标”；需要开启通知时按页面提示保存并开启。
-6. 保存成功后，单独点击“发送测试到此群”，在目标群核对测试消息，再确认 Telegram 总开关与该目标均已启用。
+1. Add the Arova notification bot supplied by the operator to the target group / channel and permit it to send messages.
+2. Use the bot's `/chatid` command to obtain the Chat ID. Copy the full value, including any minus sign.
+3. Add a destination under **Telegram alerts** and enter its group label and Chat ID.
+4. Select the destination's alert language, sources, categories, and whether to **Show my account notes in alerts**.
+5. Click **Save this destination**, or save and enable alerts when prompted.
+6. After saving, click **Send test to this group** separately. Check the message in that group, then ensure both the Telegram master switch and destination are enabled.
 
-每个目标独立保存、删除和测试，保存不会发送消息，也不会覆盖其他目标草稿。测试仅使用已保存配置；目标有未保存修改时，请先保存。没有选择有效通知类型的目标不会收到自动推送。
+Each destination is saved, deleted, and tested independently. Saving sends no message and does not overwrite other drafts. Tests use saved settings only; save any pending changes first. A destination with no valid categories will not receive automated alerts.
 
-Fomo/Pump 通知可包含本次正文、代币头像、原文及合约操作入口；缺少图片时回退文字，没有正文时省略正文。账号备注按每个目标的开关显示。
+Fomo / Pump alerts may include the current post, token avatar, original link, and contract actions. Missing images fall back to text, and missing post bodies are omitted. Account note visibility follows each destination's switch.
 
-### 监听群组或频道消息
+### Monitor group or channel messages
 
-“监听消息”用于把 Bot 实际收到的指定群组/频道消息纳入动态，和向群里发送提醒的通知目标是两套设置。填写监听 Chat ID 并保存；Bot 还必须能收到该群或频道的消息。这不是 Telegram 个人账号的完整聊天历史读取。
+**Monitor messages** adds messages the bot actually receives from specified groups / channels to activity. This is separate from outbound alert destinations. Enter the monitored Chat IDs and save; the bot must also be able to receive messages there. This does not read your personal Telegram account's full chat history.
 
-## 持续监控
+## Watchlist
 
-在“持续监控”按页面选项填写代币合约、链及名称后，点击“添加持续监控”。也可从浮窗当前代币的 `24/7` 入口进入，核对带入的信息再确认。
+Under **Watchlist**, enter the token contract, chain, and name as offered by the form, then click **Add to watchlist**. You can also enter from the current token's `24/7` control in the panel; review the supplied information before confirming.
 
-列表中的项目可按需要停用或移除。持续监控配置不会替你交易；实际动态仍依赖有效来源授权、监控状态、使用权和通知规则。
+Disable or remove entries as needed. A watchlist does not execute trades. Actual activity depends on valid provider connections, monitoring state, service access, and notification rules.
 
-## 方案与使用权
+## Plans and access
 
-打开“方案与使用权”查看服务端当前状态及订单。显示免费开放时无需付款；套餐价格、期限与可用渠道以页面为准。管理员赠送或延长期限后，可点击“刷新状态”核对。
+Open **Plans & access** to view current access and orders. Free mode requires no payment. Prices, durations, and available channels are shown in the interface. After an administrator grants or extends access, use **Refresh status** to check it.
 
-无限期权益代表无到期时间；在插件中也可能显示为“永久使用权”。它无需续费，但仍可由超级管理员调整或暂停。获得权益不会自动获得内部管理后台权限。
+Unlimited access has no expiry and may be displayed as **Permanent access**. It does not require renewal but can still be adjusted or suspended by a super administrator. Service access does not grant internal administrator permissions.
 
-运营开启付费并配置可用方案后，流程为：选择方案、网络与稳定币 → 创建订单 → 在独立收银台连接钱包并确认操作 → 等待链上核验和权益更新。仅按当前收银台展示的步骤付款，不用文档或聊天中的地址代替订单。
+When paid access and an available plan are enabled: choose a plan, network, and stablecoin → create an order → connect your wallet and confirm in the separate checkout → wait for on-chain verification and access activation. Follow the current checkout instructions; do not substitute addresses from documentation or chat.
 
-钱包取消后保留原订单；若提示广播结果未知、核验中或“已付款、正在开通”，先查看订单状态，不要重复付款。网络、币种或金额错误时，保留订单号和交易哈希交由运营核对，不承诺自动匹配或退款。
+Cancelling a wallet action keeps the order. If broadcast status is unknown, verification is pending, or the order is paid but still activating, check the order before paying again. For an incorrect network, currency, or amount, keep the order ID and transaction hash for the operator to review. Automatic matching or refunds are not guaranteed.
 
-续费会从现有未过期的有效期继续累加；已到期则从开通时开始计时。页面会自动刷新订单，也可手动刷新。服务不自动扣款。
+Renewal extends an unexpired access period; expired access starts from activation. Orders refresh automatically and can also be refreshed manually. The service does not charge automatically.
 
-## 常见问题
+## Troubleshooting
 
-| 问题 | 排查方式 |
+| Issue | What to check |
 | --- | --- |
-| Chrome 无法加载安装包 | 确认已解压，并选中了直接包含 manifest.json 的文件夹；不要选择 Source code 包 |
-| 更新后仍是旧界面 | 重新下载同名包，核对构建标识，替换原加载目录并重新加载扩展、刷新交易页 |
-| 设置页一直在读取 | 重新加载扩展后重开管理页，检查网络和 Arova 登录状态；仍失败时保留脱敏错误信息 |
-| 交易页没有浮窗 | 确认平台/页面受支持、浮窗已开启、扩展有站点访问权限，并刷新页面 |
-| 看不到预期动态 | 核对来源授权、监控开关、选中的视图/来源、当前代币筛选和使用权状态 |
-| 浏览器通知没出现 | 检查账号提醒、本机通知开关及系统权限；管理页不会重放历史通知，首次读取也不是历史补发 |
-| TG 测试按钮不可用 | 先保存当前目标；有草稿或正在提交时不可测试 |
-| TG 测试失败或结果未确认 | 检查 Bot 成员/发消息权限和 Chat ID；先看群里是否已收到，结果未知时不要连续重发 |
-| 续期未完成 | 核对选定方式和实际保存状态，查看来源提示；官网可能需要重新登录或本人签名 |
-| 关注状态不一致 | 查看查询时间，稍后重新读取；平台搜索可能只返回部分匹配结果 |
-| 内部后台无法登录 | 普通插件用户无后台权限；自己的配置请通过 Chrome 工具栏打开插件管理页 |
+| Chrome cannot load the package | Extract the ZIP and select the folder directly containing manifest.json; do not use the Source code archive |
+| Old interface after updating | Download the latest build, check its identifier, replace the original folder contents, reload the extension, and refresh trading pages |
+| Settings stays on loading | Reload the extension and reopen settings; check the network and Arova session. Keep redacted error details if it persists |
+| No panel on a trading page | Check platform / page support, panel visibility, extension site permissions, and refresh the page |
+| Expected activity is missing | Check provider authorization, monitoring switches, view / source filters, token scope, and service access |
+| Browser alerts do not appear | Check account alerts, device switch, and OS permissions. Settings and initial loads do not replay historical alerts |
+| Telegram test button disabled | Save that destination first; it cannot be tested while it has a draft or is submitting |
+| Telegram test failed or unconfirmed | Check bot membership, send permissions, and Chat ID. Look for the message before retrying an uncertain delivery |
+| Renewal incomplete | Check the selected method and actual saved status. The provider may need re-login or your signature |
+| Follow status differs | Check query time and reload later. Platform search may return only part of the matches |
+| Internal admin sign-in denied | Ordinary extension users have no admin permissions. Open your own settings using the Chrome toolbar icon |
 
-反馈问题时提供插件版本/构建标识、故障时间、所用平台与脱敏错误文本。不要附带密码、Token、Cookie、验证码或钱包私钥。
+When reporting an issue, include the version / build identifier, time, platform, and redacted error text. Do not include passwords, tokens, cookies, verification codes, or private keys.
