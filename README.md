@@ -2,7 +2,23 @@
 
 [下载最新版与历史版本](https://github.com/spencer17x/arova-releases/releases)
 
+[功能介绍](FEATURES.md) · [完整使用指南](USAGE.md)
+
 这是 Arova 官方公开下载仓库，用于分发编译后的 Chrome 插件安装包、SHA256 校验文件与版本信息。无需取得私有开发仓库权限，也无需从 Chrome 商店下载。
+
+Arova 将 Fomo / Pump 动态集中到 XXYY、GMGN、DeBot 等支持的交易页面，提供账号备注、浏览器提醒和 Telegram 多目标通知。配置在插件独立管理页完成，浮窗用于查看通知与快捷操作。
+
+## 从这里开始
+
+| 想做什么 | 查看文档 |
+| --- | --- |
+| 了解支持的平台与能力 | [功能介绍](FEATURES.md) |
+| 安装或更新插件 | [安装与更新](USAGE.md#安装与更新) |
+| 完成第一次配置 | [首次上手](USAGE.md#首次上手) |
+| 连接 Fomo / Pump，选择续期方式 | [监控授权](USAGE.md#连接监控来源)、[自动续期](USAGE.md#选择自动续期方式) |
+| 设置 TG 群组/频道推送 | [Telegram 通知](USAGE.md#telegram-通知) |
+| 查看付费、赠送或永久权益 | [方案与使用权](USAGE.md#方案与使用权) |
+| 处理加载、登录或通知问题 | [常见问题](USAGE.md#常见问题) |
 
 ## 安装与更新
 
