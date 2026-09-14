@@ -54,8 +54,8 @@ jobs:
           base={'README.md','LICENSE','.github/workflows/publish.yml','.release-request.json'}
           files=set(subprocess.check_output(['git','ls-files'],text=True).splitlines())
           # Distribution tags have no source repository ancestors.
-          parents=subprocess.check_output(['git','rev-list','--parents','-n','1','HEAD'],text=True).split()
-          assert parents==[commit]
+          commit_headers=subprocess.check_output(['git','cat-file','-p','HEAD'],text=True).split('\n\n',1)[0]
+          assert not any(line.startswith('parent ') for line in commit_headers.splitlines())
           release=api(f'releases/tags/{tag}',True)
           if request['operation']=='withdraw':
               assert files==base
