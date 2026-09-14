@@ -1,0 +1,116 @@
+# Bootstrap template for the public downloads repository; not application source.
+name: Publish release assets
+
+on:
+  push:
+    tags: ['v[0-9]*', 'extension-v[0-9]*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-release-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Validate and publish data only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import base64,hashlib,json,os,re,stat,subprocess,zipfile
+          from pathlib import Path,PurePosixPath
+          repo,tag,commit=os.environ['GH_REPO'],os.environ['RELEASE_TAG'],os.environ['GITHUB_SHA']
+          assert re.fullmatch(r'(?:extension-)?v\d+\.\d+\.\d+(?:-beta\.\d+)?',tag)
+          def gh(*args,missing=False):
+              p=subprocess.run(['gh',*args],capture_output=True,text=True,timeout=120)
+              if p.returncode:
+                  if missing and '(HTTP 404)' in p.stderr:return None
+                  raise RuntimeError('GitHub operation failed; inspect the publisher job')
+              return p.stdout
+          def api(path,missing=False):
+              value=gh('api',f'repos/{repo}/{path}',missing=missing)
+              return json.loads(value) if value else None
+          def current():
+              ref=api(f'git/ref/tags/{tag}',True)
+              return bool(ref and api(f'commits/{tag}')['sha']==commit)
+          if not current():
+              print('Obsolete tag event; nothing published.')
+              raise SystemExit(0)
+          request=json.loads(Path('.release-request.json').read_text())
+          assert set(request)=={'operation','tag'} and request['tag']==tag
+          base={'README.md','LICENSE','.github/workflows/publish.yml','.release-request.json'}
+          files=set(subprocess.check_output(['git','ls-files'],text=True).splitlines())
+          # Distribution tags have no source repository ancestors.
+          parents=subprocess.check_output(['git','rev-list','--parents','-n','1','HEAD'],text=True).split()
+          assert parents==[commit]
+          release=api(f'releases/tags/{tag}',True)
+          if request['operation']=='withdraw':
+              assert files==base
+              if not current():raise SystemExit(0)
+              if release:gh('release','delete',tag,'--repo',repo,'--yes')
+              if current():gh('api','--method','DELETE',f'repos/{repo}/git/refs/tags/{tag}')
+              print('Withdrawn public version: '+tag)
+              raise SystemExit(0)
+          assert request['operation']=='publish'
+          folder=Path('.release-assets')
+          name=f'arova-chrome-{tag.removeprefix("extension-")}.zip'
+          names={name,'SHA256SUMS','release-info.json'}
+          assert files==base|{'.release-assets/'+n for n in names}
+          info=json.loads((folder/'release-info.json').read_text())
+          assert set(info)=={'component','license','tag','version','prerelease','commit','api_base','extension_id','filename','sha256'}
+          assert info['component']=='extension' and info['license']=='LicenseRef-Arova-Proprietary'
+          assert info['tag']==tag and info['filename']==name and re.fullmatch(r'[0-9a-f]{40}',info['commit'])
+          digest=hashlib.sha256((folder/name).read_bytes()).hexdigest()
+          assert digest==info['sha256'] and (folder/'SHA256SUMS').read_text()==f'{digest}  {name}\n'
+          with zipfile.ZipFile(folder/name) as z:
+              entries=z.infolist()
+              assert len(entries)==len({e.filename for e in entries}) and sum(e.file_size for e in entries)<=100*1024*1024
+              for e in entries:
+                  p=PurePosixPath(e.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in e.filename
+                  assert not stat.S_ISLNK(e.external_attr>>16) and not e.flag_bits&1
+                  assert not {'src','services','apps','.git','.github','node_modules','tests','scripts','docs'}.intersection(part.lower() for part in p.parts)
+                  assert not p.name.startswith('.env') and p.suffix.lower() not in {'.ts','.tsx','.py','.map','.pem','.key'}
+              manifest=json.loads(z.read('manifest.json'))
+              assert manifest['version_name']==tag and manifest['version']==info['version']
+              key=hashlib.sha256(base64.b64decode(manifest['key'],validate=True)).hexdigest()[:32]
+              assert ''.join(chr(ord('a')+int(c,16)) for c in key)==info['extension_id']=='gedflalfmklfccgaabdbcnjjchlfemfo'
+              assert b'LicenseRef-Arova-Proprietary' in z.read('LICENSE') and len(z.read('THIRD_PARTY_NOTICES.txt'))>100
+          wanted={n:'sha256:'+hashlib.sha256((folder/n).read_bytes()).hexdigest() for n in names}
+          notes=(f'# Arova Chrome {tag}\n\n'
+                 f'下载 `{name}`，解压后在 `chrome://extensions` 开启开发者模式，选择“加载已解压的扩展程序”。\n\n'
+                 '更新时替换原加载目录并点击“重新加载”，然后刷新交易页。GitHub ZIP 不会自动更新已安装的插件。\n\n'
+                 f'版本：`{info["version"]}` · 扩展 ID：`{info["extension_id"]}`\n\n'
+                 f'构建标识：`{info["commit"]}`\n\nSHA256：`{digest}`\n\n'
+                 '官方构建采用 Arova 专有商业许可；第三方许可证保留在安装包中。公开下载不代表项目开源。')
+          Path('public-notes.md').write_text(notes)
+          if release and not release['draft'] and {a['name']:a.get('digest') for a in release['assets']}==wanted:
+              print('Release already matches the verified artifacts.')
+              raise SystemExit(0)
+          if not current():raise SystemExit(0)
+          if release:
+              gh('release','edit',tag,'--repo',repo,'--draft','--latest=false','--notes-file','public-notes.md')
+              for asset in release['assets']:
+                  if asset['name'] not in names:gh('api','--method','DELETE',f'repos/{repo}/releases/assets/{asset["id"]}')
+          else:
+              gh('release','create',tag,'--repo',repo,'--verify-tag','--draft','--latest=false','--title',f'Arova Chrome {tag}','--notes-file','public-notes.md')
+          gh('release','upload',tag,'--repo',repo,*[str(folder/n) for n in sorted(names)],'--clobber')
+          if not current():raise SystemExit(0)
+          gh('release','edit',tag,'--repo',repo,'--draft=false','--prerelease='+str(info['prerelease']).lower(),'--latest='+str(not info['prerelease']).lower())
+          final=api(f'releases/tags/{tag}')
+          assert not final['draft'] and {a['name']:a.get('digest') for a in final['assets']}==wanted
+          print('Published verified extension artifacts: '+tag)
+          PY
