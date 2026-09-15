@@ -2,7 +2,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Applies to the current public beta. Updated: 2026-09-14.
+Applies to the current public beta. Updated: 2026-09-15.
 
 [Features](FEATURES.md) · [Download](https://github.com/spencer17x/arova-releases/releases) · [Home](README.md)
 
@@ -86,9 +86,19 @@ Server renewal is currently preselected on the authorization form. **Preselectio
 | Method | Requirements | What you do |
 | --- | --- | --- |
 | Automatic browser renewal | Chrome must be running, Arova signed in, and the website session recoverable | No long-lived credential or private-key entry; allow temporary background provider tabs to sync short-lived sessions for the same account |
-| Automatic server renewal | Maintained by Arova's server, including when Chrome is closed | Manually enter additional credentials in the provider card, read the risks, and explicitly confirm; the server must offer this feature |
+| Automatic server renewal | Maintained by Arova's server, including when Chrome is closed | Enter credentials in the provider card (Fomo also offers confirmed local fill), read the risks, and explicitly confirm; the server must offer this feature |
 
 **Fomo server renewal** requires the same session's Access Token, Refresh Token, and optional Privy Access Token. These are long-lived session credentials, not read-only credentials. Follow the help in the card and close website tabs sharing that session as instructed to avoid concurrent refreshes.
+
+To fill Fomo credentials without copying them manually:
+
+1. In the same Chrome profile, open `https://fomo.family` and sign in to the intended Fomo account.
+2. In Arova settings → Connections → Fomo → Server renewal, click **Read from a signed-in Fomo page**.
+3. Select the website tab, read the local-read notice, and check its consent box. Click **Confirm read and fill**, then approve the optional Chrome permission if prompted.
+4. If both required fields are available, all three inputs are replaced with that session; an unavailable optional PAT is left empty. No credentials are uploaded and no renewal starts.
+5. Review the account and inputs, follow the instructions for closing Fomo tabs sharing the session, then confirm custody and submit separately. The server verifies that it is the same connected account.
+
+If a required field is missing or unrecognized, no fields are filled and your previous input is kept. Use the manual instructions below the button. Website storage may change, and signed-in state alone does not guarantee these fields are accessible. A tab reload, navigation, account change, or permission refusal cancels the read. Reading does not automatically close tabs, refresh tokens, or read any wallet keys.
 
 **Pump server renewal** requires the full Solana private key in Base58 matching the connected account. It grants wallet control, not read-only access. “Login only, no trades” is a software restriction; it does not limit the key's actual permissions. Choose browser renewal if you do not understand the credentials or do not want custody.
 
