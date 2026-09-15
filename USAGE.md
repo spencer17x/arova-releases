@@ -2,9 +2,11 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Applies to the current public beta. Updated: 2026-09-15.
+Applies to the updated v0.0.1-beta.0 release. Updated: 2026-09-15. Screenshots were captured with the public beta.
 
-[Features](FEATURES.md) · [Download](https://github.com/spencer17x/arova-releases/releases) · [Home](README.md)
+The latest client links destination saving to the main Telegram switch: when the main switch is off and a destination is enabled, **Save and enable alerts** saves that destination and resumes all enabled destinations. Disabling the main switch preserves each destination’s settings. Saving a disabled destination or sending a test does not enable automatic alerts. The screenshots below predate this change; older release packages still require enabling the main switch separately.
+
+[Features](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.md) · [Download](https://github.com/spencer17x/arova-releases/releases) · [Home](README.md)
 
 - [Installation and updates](#installation-and-updates)
 - [Language settings](#language-settings)

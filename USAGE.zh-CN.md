@@ -2,9 +2,11 @@
 
 [English](USAGE.md) | **简体中文**
 
+> 当前仓库最新实现：总开关关闭且目标启用时，点击「保存并开启通知」会保存该群并恢复所有已启用群。关闭总开关保留各群配置；保存禁用群或发送测试不会开启通知。下方截图拍摄于此改动前的公开 beta，旧 Release 包仍需单独开启总开关。
+
 适用：当前公开 Beta 版本。更新：2026-09-15。
 
-[功能介绍](FEATURES.zh-CN.md) · [下载插件](https://github.com/spencer17x/arova-releases/releases) · [返回首页](README.zh-CN.md)
+[功能介绍](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.zh-CN.md) · [下载插件](https://github.com/spencer17x/arova-releases/releases) · [返回首页](README.zh-CN.md)
 
 - [安装与更新](#安装与更新)
 - [语言设置](#语言设置)
