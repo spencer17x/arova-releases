@@ -171,6 +171,7 @@ Renewal extends an unexpired access period; expired access starts from activatio
 | --- | --- |
 | Chrome cannot load the package | Extract the ZIP and select the folder directly containing manifest.json; do not use the Source code archive |
 | Old interface after updating | Download the latest build, check its identifier, replace the original folder contents, reload the extension, and refresh trading pages |
+| Connecting reports a user gesture error | Update to the current beta build, reload the extension, reopen settings, and click Connect again; permission requests must start directly from that click |
 | Settings stays on loading | Reload the extension and reopen settings; check the network and Arova session. Keep redacted error details if it persists |
 | No panel on a trading page | Check platform / page support, panel visibility, extension site permissions, and refresh the page |
 | Expected activity is missing | Check provider authorization, monitoring switches, view / source filters, token scope, and service access |
