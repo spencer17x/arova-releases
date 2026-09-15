@@ -70,41 +70,22 @@ Wallet sign-in uses your signature to prove identity. You do not provide a priva
 
 ## Connect monitoring sources
 
-1. Sign in to Arova and find the Fomo or Pump card under **Connections**.
-2. Click **Connect account** and sign in to your own account on the official provider page.
-3. Return to the matching provider section and complete the requested permissions and confirmation. Follow-up inputs, status, and prompts appear in that section.
-4. Check connection status, then enable the desired monitoring and notification rules.
+1. Sign in to Arova and open **Connections**.
+2. For Fomo, read the custody notice, close other Fomo tabs, and click **Connect and enable server renewal**. Approve Chrome permissions if prompted and sign in on the official page if needed. Arova reads that page's session, verifies the account, and submits encrypted server custody automatically. The temporary authorization page closes when handing over the session; no Token form or second submit is needed.
+3. For Pump, click **Connect account** and sign in on the official page if needed. After connecting, enter the matching account's full Solana private key in its card, review the custody notices, and submit. Arova does not automatically extract wallet keys.
+4. Wait for the server renewal success status, then enable the desired monitoring and notification rules. A connected Pump session alone does not mean renewal is enabled.
 
-Providers are managed separately. Pausing monitoring, revoking a connection, and turning off renewal are different actions; check each status.
-
-If authorization fails, read the feedback and correct your input. If the result is unconfirmed, check status before submitting again. Leaving the page, changing accounts, or reloading may discard unsaved sensitive credential drafts.
+The providers are independent. Pausing monitoring, revoking a connection, and turning off renewal are separate actions. Errors appear as feedback; an unconfirmed outcome must be checked before resubmitting. Changing accounts, leaving, or reloading may discard sensitive drafts.
 
 ## Renewal methods
 
-Server renewal is currently preselected on the authorization form. **Preselection does not activate custody.** The methods are mutually exclusive; the saved status determines which is active.
+This version uses **server renewal only** and stops legacy browser renewal jobs. Existing server custody is preserved; it is never silently recreated after revocation.
 
-| Method | Requirements | What you do |
-| --- | --- | --- |
-| Automatic browser renewal | Chrome must be running, Arova signed in, and the website session recoverable | No long-lived credential or private-key entry; allow temporary background provider tabs to sync short-lived sessions for the same account |
-| Automatic server renewal | Maintained by Arova's server, including when Chrome is closed | Enter credentials in the provider card (Fomo also offers confirmed local fill), read the risks, and explicitly confirm; the server must offer this feature |
+**Fomo:** the connection button explicitly authorizes reading the temporary official page's Access Token, Refresh Token, and optional Privy Access Token and storing them encrypted on Arova's server and backups. These are not read-only credentials. Other Fomo tabs block handover to avoid concurrent session refreshes; Arova does not close your existing tabs. Missing credentials, website changes, permission refusal, or an account change stops completion with a clear error. Website login or verification may still require your action.
 
-**Fomo server renewal** requires the same session's Access Token, Refresh Token, and optional Privy Access Token. These are long-lived session credentials, not read-only credentials. Follow the help in the card and close website tabs sharing that session as instructed to avoid concurrent refreshes.
+**Pump:** server renewal requires the full Base58 Solana private key matching the connected account, entered manually with explicit consent. Ordinary wallet connection and login do not provide that key. Without the matching key, server renewal cannot be enabled. The key grants full wallet control; “login only, no trades” is a software restriction, not a limit on the key's permissions.
 
-To fill Fomo credentials without copying them manually:
-
-1. In the same Chrome profile, open `https://fomo.family` and sign in to the intended Fomo account.
-2. In Arova settings → Connections → Fomo → Server renewal, click **Read from a signed-in Fomo page**.
-3. Select the website tab, read the local-read notice, and check its consent box. Click **Confirm read and fill**, then approve the optional Chrome permission if prompted.
-4. If both required fields are available, all three inputs are replaced with that session; an unavailable optional PAT is left empty. No credentials are uploaded and no renewal starts.
-5. Review the account and inputs, follow the instructions for closing Fomo tabs sharing the session, then confirm custody and submit separately. The server verifies that it is the same connected account.
-
-If a required field is missing or unrecognized, no fields are filled and your previous input is kept. Use the manual instructions below the button. Website storage may change, and signed-in state alone does not guarantee these fields are accessible. A tab reload, navigation, account change, or permission refusal cancels the read. Reading does not automatically close tabs, refresh tokens, or read any wallet keys.
-
-**Pump server renewal** requires the full Solana private key in Base58 matching the connected account. It grants wallet control, not read-only access. “Login only, no trades” is a software restriction; it does not limit the key's actual permissions. Choose browser renewal if you do not understand the credentials or do not want custody.
-
-Server credentials are stored encrypted on the service and in backups. Closing Chrome, signing out of Arova, or pausing monitoring does not revoke custody. Use **Turn off server renewal** or the relevant removal button. After active credentials are removed, existing backups expire according to retention rules; immediate erasure cannot be guaranteed. Never share tokens, private keys, recovery phrases, or verification codes in chats, groups, or issue screenshots.
-
-Either method may need your action for website verification, re-login, or session revocation. To switch to browser renewal, turn off existing server renewal first, then explicitly enable browser renewal.
+Server custody is experimental. Closing Chrome, signing out of Arova, or pausing monitoring does not revoke custody. Use **Turn off server renewal** or the credential removal button. Active credentials are removed on revocation; encrypted backups expire under retention rules, so immediate erasure cannot be guaranteed. Never share credentials in chats or screenshots. Website verification, re-login, or revocation can still require your action.
 
 ## Panel and browser alerts
 
@@ -114,7 +95,7 @@ Use the panel to switch between Following, Platform activity, and Pump Top, and 
 
 **Token info card** changes card visibility, not the current-token filter. Browser alerts and the Telegram master switch are available as quick controls in the panel; detailed rules stay in settings.
 
-Browser alerts also require Chrome and operating system notification permissions. Closing the panel does not stop server monitoring or Telegram alerts. Closing Chrome stops browser renewal and browser desktop notifications.
+Browser alerts also require Chrome and operating system notification permissions. Closing the panel does not stop server monitoring or Telegram alerts. Closing Chrome stops browser desktop notifications.
 
 ## Account notes and platform search
 

@@ -28,7 +28,7 @@ Data comes from third-party platforms. Authorization, provider responses, and ne
 | Standalone settings | Manage sign-in identities, connections, notifications, watchlists, display preferences, and themes |
 | Sign-in and linking | Email/password, Google, Telegram, Solana wallet, and EVM wallet entry points; availability depends on the service configuration |
 | Fomo / Pump connections | Connect, pause, or revoke each provider separately; status and follow-up inputs appear in that provider's section |
-| Renewal | Choose browser or server renewal and inspect status / expiry; Fomo can fill session fields from a selected website tab after confirmation, with separate consent before server custody |
+| Renewal | Server renewal with status / expiry; Fomo connects and enrolls automatically after the disclosed click, while Pump requires manual private-key entry and custody consent |
 | Account notes | Read actual follows, search platform accounts and their follow status, add private notes, and open user profiles |
 | Notification panel | Filter by source, view, and current token; open originals, copy contracts, and open trading pages |
 | Quick switches | Toggle browser alerts, the Telegram master switch, and the token info card from the panel |

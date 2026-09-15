@@ -19,7 +19,7 @@ Arova 将 Fomo / Pump 动态集中到 XXYY、GMGN、DeBot 等支持的交易页�
 | 了解支持的平台与能力 | [功能介绍](FEATURES.zh-CN.md) |
 | 安装或更新插件 | [安装与更新](USAGE.zh-CN.md#安装与更新) |
 | 完成第一次配置 | [首次上手](USAGE.zh-CN.md#首次上手) |
-| 连接 Fomo / Pump，选择续期方式 | [监控授权](USAGE.zh-CN.md#连接监控来源)、[自动续期](USAGE.zh-CN.md#选择自动续期方式) |
+| 连接 Fomo / Pump，开启服务端续期 | [监控授权](USAGE.zh-CN.md#连接监控来源)、[自动续期](USAGE.zh-CN.md#选择自动续期方式) |
 | 设置 TG 群组/频道推送 | [Telegram 通知](USAGE.zh-CN.md#telegram-通知) |
 | 查看付费、赠送或永久权益 | [方案与使用权](USAGE.zh-CN.md#方案与使用权) |
 | 处理加载、登录或通知问题 | [常见问题](USAGE.zh-CN.md#常见问题) |

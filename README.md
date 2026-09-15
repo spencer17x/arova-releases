@@ -19,7 +19,7 @@ The extension supports English and Simplified Chinese. It follows the browser la
 | Explore supported platforms and capabilities | [Features](FEATURES.md) |
 | Install or update | [Installation and updates](USAGE.md#installation-and-updates) |
 | Set up for the first time | [Quick start](USAGE.md#quick-start) |
-| Connect Fomo / Pump and choose renewal | [Connect monitoring sources](USAGE.md#connect-monitoring-sources), [Renewal methods](USAGE.md#renewal-methods) |
+| Connect Fomo / Pump with server renewal | [Connect monitoring sources](USAGE.md#connect-monitoring-sources), [Renewal methods](USAGE.md#renewal-methods) |
 | Send alerts to Telegram groups / channels | [Telegram alerts](USAGE.md#telegram-alerts) |
 | Check paid, gifted, or permanent access | [Plans and access](USAGE.md#plans-and-access) |
 | Troubleshoot loading, sign-in, or alerts | [Troubleshooting](USAGE.md#troubleshooting) |
