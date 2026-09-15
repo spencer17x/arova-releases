@@ -50,3 +50,5 @@ This repository does not contain Arova's TypeScript / Python application source,
 ## License
 
 Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Public downloads do not make the application open source. Third-party licenses and copyright notices remain in the package's `THIRD_PARTY_NOTICES.txt`. Account access and available plans are controlled by the Arova server.
+
+[Illustrated walkthrough](USAGE.md#illustrated-walkthrough)

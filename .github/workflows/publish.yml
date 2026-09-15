@@ -54,6 +54,30 @@ jobs:
           base={'README.md','LICENSE','.github/workflows/publish.yml','.release-request.json'}
           files=set(subprocess.check_output(['git','ls-files'],text=True).splitlines())
           base |= files & {'FEATURES.md','USAGE.md','README.zh-CN.md','FEATURES.zh-CN.md','USAGE.zh-CN.md'}
+          guide_images = {
+              "assets/guide/01-register.png",
+              "assets/guide/02-login.png",
+              "assets/guide/03-account.png",
+              "assets/guide/04-providers-before.png",
+              "assets/guide/05-fomo-success.png",
+              "assets/guide/06-pump-before.png",
+              "assets/guide/07-pump-export.png",
+              "assets/guide/08-pump-consent.png",
+              "assets/guide/09-pump-success.png",
+              "assets/guide/10-telegram-config.png",
+              "assets/guide/11-telegram-saved.png",
+              "assets/guide/12-telegram-test.png",
+              "assets/guide/13-telegram-received.png",
+              "assets/guide/14-fomo-live.png",
+          }
+          for name in files & guide_images:
+              image = Path(name)
+              assert not image.is_symlink() and image.is_file()
+              assert image.resolve().is_relative_to(Path.cwd().resolve())
+              assert 0 < image.stat().st_size <= 5 * 1024 * 1024
+              with image.open('rb') as stream:
+                  assert stream.read(8) == b'\x89PNG\r\n\x1a\n'
+          base |= files & guide_images
           # Distribution tags have no source repository ancestors.
           commit_headers=subprocess.check_output(['git','cat-file','-p','HEAD'],text=True).split('\n\n',1)[0]
           assert not any(line.startswith('parent ') for line in commit_headers.splitlines())

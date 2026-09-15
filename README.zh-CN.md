@@ -50,3 +50,5 @@ Arova 将 Fomo / Pump 动态集中到 XXYY、GMGN、DeBot 等支持的交易页�
 ## 许可
 
 Arova 采用专有商业许可，见 [LICENSE](LICENSE)。公开下载不代表项目改为开源授权；第三方许可证与版权通知保留在安装包的 `THIRD_PARTY_NOTICES.txt` 中。账号使用权限和付费方案由 Arova 服务端决定。
+
+[完整图文教程](USAGE.zh-CN.md#图文上手教程)

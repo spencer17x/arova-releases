@@ -164,3 +164,84 @@ Renewal extends an unexpired access period; expired access starts from activatio
 | Internal admin sign-in denied | Ordinary extension users have no admin permissions. Open your own settings using the Chrome toolbar icon |
 
 When reporting an issue, include the version / build identifier, time, platform, and redacted error text. Do not include passwords, tokens, cookies, verification codes, or private keys.
+
+
+## Illustrated walkthrough
+
+### Installation and preparation
+Download the official ZIP from the public release repository, extract it, and use Chrome's Load unpacked option. Replacing a package with the same version also requires reloading the extension.
+
+### 1. Create an Arova account and sign in
+Under Account & login, choose Create account, enter your email and a separate password of at least 12 characters, then select Create account and sign in. Your Arova password is separate from your Google password. Existing users can sign in directly or use a linked identity.
+
+![Create an Arova account; email and password regions are redacted](assets/guide/01-register.png)
+
+Existing users can select Return to sign in and use their Arova email and password. Screenshots show the Chinese interface; choose English in the sidebar language selector if preferred.
+
+![Arova sign-in form](assets/guide/02-login.png)
+
+After sign-in, Account & login shows the linked email/password identity. Linking Google, Telegram, or a wallet is optional and separate from connecting the Fomo/Pump monitoring sources below.
+
+![Signed-in account settings with email redacted](assets/guide/03-account.png)
+
+### 2. Connect Fomo
+Open Connections, read the custody notice, close other Fomo tabs, and click Connect and enable server renewal. Complete any official login or verification. The extension then connects and enrolls the session automatically. Wait for Server renewal authorization saved.
+
+![Connections before enrollment](assets/guide/04-providers-before.png)
+
+A successful connection shows a Fomo connected and server renewal enabled toast, plus the saved authorization status in the Fomo section. No manual token entry is needed. If account changes, other official tabs, or verification errors block the operation, follow the displayed instructions before reconnecting.
+
+![Fomo connection and server renewal authorization saved](assets/guide/05-fomo-success.png)
+
+### 3. Connect Pump and configure server renewal
+Click Connect account in the Pump section and complete the official login. The basic connection captures the current session; ongoing server renewal requires the separate manual custody configuration below.
+
+![Pump account connection entry](assets/guide/06-pump-before.png)
+
+If you choose private-key custody for renewal, personally obtain the matching account's key through the official Pump wallet export interface. This screenshot shows only the export entry, with the wallet identifier redacted; it contains no private key.
+
+![Official Pump wallet export interface with wallet identifier redacted](assets/guide/07-pump-export.png)
+
+Return to Arova and manually enter that account's Base58 Solana private key in the Pump section. Review and select both custody and ongoing login-signing confirmations, then submit to enable server renewal. Seed phrases, EVM private keys, and login tokens are not accepted.
+
+This is not read-only access: the complete private key can control the wallet. Login-only behavior is a software constraint, not a limitation of the key's permissions. Materials are encrypted on the server and in backups until active custody is revoked; backups expire under their retention policy. Never send the key in chats or screenshots.
+
+![User-completed custody form with the entire private-key input covered by a solid mask](assets/guide/08-pump-consent.png)
+
+After Server renewal authorization saved appears, you do not need to enter the key again. Closing Chrome does not revoke custody. Use the stop-renewal and remove-active-key button to remove active custody. Waiting for the next schedule indicates saved authorization awaiting scheduling; it does not prove renewal after natural expiry.
+
+![Pump server renewal authorization saved](assets/guide/09-pump-success.png)
+
+### 4. Configure a Telegram destination
+Add a destination under Telegram alerts, enter a label and Chat ID, and choose the notification language, sources, and whether to show your account notes. Save each destination separately; other destination drafts remain independent.
+
+This example selects only Pump Friends and Fomo Alerts, with Fomo alerts restricted to buys and sells. Platform feeds and rankings are unchecked. Adjust these choices to suit your needs.
+
+![Telegram destination language, account notes, and source filters; Chat ID redacted](assets/guide/10-telegram-config.png)
+
+Click Save this destination. The confirmation explicitly states that the destination was saved without sending a test. Testing becomes available after saving.
+
+![Destination saved independently without sending a test](assets/guide/11-telegram-saved.png)
+
+### 5. Send a separate test message
+Save the destination first, then click Send test to this group. Saving alone does not send a test. Check both the success feedback and the Arova test notification received in Telegram. Test messages are not trading signals.
+
+![The page confirms that the test message was sent to this group](assets/guide/12-telegram-test.png)
+
+![Test message actually received in Telegram; group information and unrelated messages cropped out](assets/guide/13-telegram-received.png)
+
+The received message says automatic notifications are still off. A successful test proves that the bot can send to the destination. To receive subsequent live signals, also enable the main automatic-notification switch on the Telegram page and keep this destination enabled. New signals must match the selected sources and types. Sending a test does not replay historical alerts. If delivery is unconfirmed, check the group before clicking again.
+
+
+### 6. Daily use and troubleshooting
+Use the floating panel for alerts and quick switches, and the management page for full settings. Closing Chrome, signing out, pausing monitoring, and revoking custody are different actions. Use the relevant renewal/credential removal control to revoke active custody; backups expire under their retention policy.
+
+The screenshot below shows a real Fomo Alerts buy notification received after the test. It includes the token image, source, trade value, market cap, event time, and links to the original and trading platforms. The account name and contract identifier are redacted. The earlier test message described the switch state at the time of that test; its text does not update when the switch changes later.
+
+![Actual Fomo buy notification received, with account name and contract redacted](assets/guide/14-fomo-live.png)
+
+This walkthrough verifies email registration and sign-in, Fomo/Pump connections and saved renewal authorization, independent Telegram saving and testing, and a received Fomo live alert. Pump live receipt and long-term renewal after natural expiry on either platform were not verified by this screenshot workflow.
+
+
+### Screenshot privacy
+Emails, personal names, wallet addresses, group identifiers, and sensitive details are covered with solid masks. Passwords and private keys are entered only by the user in the designated form and are never captured in full. Platform content, names, and custom notes retain their original language.
