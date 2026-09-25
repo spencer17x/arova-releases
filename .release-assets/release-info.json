@@ -1,0 +1,12 @@
+{
+  "component": "extension",
+  "license": "LicenseRef-Arova-Proprietary",
+  "tag": "v0.0.1-beta.1",
+  "version": "0.0.1.1",
+  "prerelease": true,
+  "commit": "a053c4bd1c4f1698c3c9b16c95ce485d8ca0ff38",
+  "api_base": "https://api.arova.top",
+  "extension_id": "gedflalfmklfccgaabdbcnjjchlfemfo",
+  "filename": "arova-chrome-v0.0.1-beta.1.zip",
+  "sha256": "f78238f83ee014100ed22cebd60efa91954de29e98a7a53b7f50fa3620d7c05c"
+}
