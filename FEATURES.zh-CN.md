@@ -2,7 +2,7 @@
 
 [English](FEATURES.md) | **简体中文**
 
-适用：当前公开 Beta 版本。更新：2026-09-15。
+适用：当前公开 Beta 版本。更新：2026-09-25。
 
 [下载插件](https://github.com/spencer17x/arova-releases/releases) · [使用指南](USAGE.zh-CN.md) · [返回首页](README.zh-CN.md)
 

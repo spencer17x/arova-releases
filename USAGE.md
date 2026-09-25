@@ -2,7 +2,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Applies to the updated v0.0.1-beta.0 release. Updated: 2026-09-15. Screenshots were captured with the public beta.
+Applies to v0.0.1-beta.1. Updated: 2026-09-25. Screenshots were captured with the public beta.
 
 The latest client links destination saving to the main Telegram switch: when the main switch is off and a destination is enabled, **Save and enable alerts** saves that destination and resumes all enabled destinations. Disabling the main switch preserves each destination’s settings. Saving a disabled destination or sending a test does not enable automatic alerts. The screenshots below predate this change; older release packages still require enabling the main switch separately.
 

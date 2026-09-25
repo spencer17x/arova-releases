@@ -2,7 +2,7 @@
 
 **English** | [简体中文](FEATURES.zh-CN.md)
 
-Applies to the current public beta. Updated: 2026-09-15.
+Applies to the current public beta. Updated: 2026-09-25.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
