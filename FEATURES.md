@@ -64,3 +64,5 @@ The user's extension settings page is separate from the internal administration 
 - Arova wallet sign-in proves identity. It is separate from Pump server key custody.
 - Server renewal is experimental. Fomo long-lived sessions and full Pump Solana private keys are not read-only access. Read [Renewal methods](USAGE.md#renewal-methods) first.
 - This public repository distributes official builds and documentation. Application source remains private; see [LICENSE](LICENSE).
+
+Growth alerts in v0.0.1-beta.1 share a card with chain, token, full copyable contract, actual multiple, current price and market cap. Missing quotes are labeled unavailable. Price, provider-first-alert and wallet market-cap baselines are labeled separately. Telegram replies to the corresponding first contract notification in the same account, destination and source when its receipt is available; older messages without receipts cannot be linked. Update the extension folder and reload Arova to use the new layout.

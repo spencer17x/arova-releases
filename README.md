@@ -52,3 +52,5 @@ This repository does not contain Arova's TypeScript / Python application source,
 Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Public downloads do not make the application open source. Third-party licenses and copyright notices remain in the package's `THIRD_PARTY_NOTICES.txt`. Account access and available plans are controlled by the Arova server.
 
 [Illustrated walkthrough](USAGE.md#illustrated-walkthrough)
+
+Growth alerts in v0.0.1-beta.1 share a card with chain, token, full copyable contract, actual multiple, current price and market cap. Missing quotes are labeled unavailable. Price, provider-first-alert and wallet market-cap baselines are labeled separately. Telegram replies to the corresponding first contract notification in the same account, destination and source when its receipt is available; older messages without receipts cannot be linked. Update the extension folder and reload Arova to use the new layout.

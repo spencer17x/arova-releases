@@ -247,3 +247,5 @@ This walkthrough verifies email registration and sign-in, Fomo/Pump connections 
 
 ### Screenshot privacy
 Emails, personal names, wallet addresses, group identifiers, and sensitive details are covered with solid masks. Passwords and private keys are entered only by the user in the designated form and are never captured in full. Platform content, names, and custom notes retain their original language.
+
+Growth alerts in v0.0.1-beta.1 share a card with chain, token, full copyable contract, actual multiple, current price and market cap. Missing quotes are labeled unavailable. Price, provider-first-alert and wallet market-cap baselines are labeled separately. Telegram replies to the corresponding first contract notification in the same account, destination and source when its receipt is available; older messages without receipts cannot be linked. Update the extension folder and reload Arova to use the new layout.
