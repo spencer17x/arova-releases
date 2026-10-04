@@ -2,67 +2,37 @@
 
 **English** | [简体中文](FEATURES.zh-CN.md)
 
-Applies to the current public beta. Updated: 2026-09-25.
+Updated: 2026-10-04. Applies to the beta.2 client and compatible deployed service.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
-Arova brings activity from Fomo, Pump, and other configured sources to trading pages, with browser and Telegram alerts to help you recognize followed accounts, inspect associated tokens, and return to the original content.
-
-## Platforms and activity
-
-The panel appears on supported **XXYY, GMGN, and DeBot** trading pages. Account and notification settings live in the extension's standalone settings page.
-
-| View | Content | Purpose |
-| --- | --- | --- |
-| Following | Fomo Alerts, Pump Friends, and configured Telegram inbound messages | Track activity associated with connected accounts' follows |
-| Platform activity | Fomo Feed and Pump platform home-feed activity | Browse platform-wide information; this is not a personal following list |
-| Pump Top | Rankings supplied by Pump | View the platform leaderboard; this is not an Arova score |
-
-Data comes from third-party platforms. Authorization, provider responses, and network conditions affect availability. Arova does not guarantee complete history or instant delivery of every message.
-
-## Main capabilities
-
-| Feature | What it does |
+| Capability | Current behavior |
 | --- | --- |
-| English and Chinese | Interface follows the browser, with a manual English / Simplified Chinese choice; each Telegram destination chooses its own language |
-| Standalone settings | Manage sign-in identities, connections, notifications, watchlists, display preferences, and themes |
-| Sign-in and linking | Email/password, Google, Telegram, Solana wallet, and EVM wallet entry points; availability depends on the service configuration |
-| Fomo / Pump connections | Connect, pause, or revoke each provider separately; status and follow-up inputs appear in that provider's section |
-| Renewal | Server renewal with status / expiry; Fomo connects and enrolls automatically after the disclosed click, while Pump requires manual private-key entry and custody consent |
-| Account notes | Read actual follows, search platform accounts and their follow status, add private notes, and open user profiles |
-| Notification panel | Filter by source, view, and current token; open originals, copy contracts, and open trading pages |
-| Quick switches | Toggle browser alerts, the Telegram master switch, and the token info card from the panel |
-| Telegram destinations | Configure sources, categories, note visibility, and language per group / channel; save and test independently |
-| Watchlist | Maintain tokens by chain and contract; received activity still depends on provider access and notification rules |
-| Appearance and device preferences | Themes, panel visibility and size, and per-site position memory |
-| Plans and access | View access, available plans, and orders; when paid access is enabled, pay through a separate checkout page |
+| Discovery | Public GigaX signals; private wallet activity requires sign-in |
+| Wallet monitoring | Add a wallet address, select compatible chains and choose buys, sells, incoming transfers, outgoing transfers or other activity |
+| Networks | Solana, Ethereum, BSC, Base and Robinhood |
+| Shared workspace | Website and extension use the same account data, private notes and server-side monitoring rules |
+| RPC settings | Users manage and select RPC nodes for their own wallet monitoring; credentials are encrypted and isolated by user |
+| Wallet cards | Token identity, chain, full contract, asset flows, timestamps and transaction links; uncertain or missing values remain labeled |
+| Routed trades | Evidence-based settlement without inventing wallet debits or credits; a router payout alone does not establish that the recipient bought |
+| Telegram | Independent destinations, rules, languages and note visibility; saving and sending a test are separate actions |
+| Trends and forwarding | Dedicated trend monitors and Telegram message-forwarding settings; chain selection supports multiple networks |
+| Languages | English and Simplified Chinese UI; source content and token names retain their original language |
+| Sound and layout | Shared sound preferences/custom audio, compact panels, responsive settings and per-site panel positioning |
+| Account access | Account settings, available plans and access status; ordinary users do not receive internal administrator permissions |
 
-Account lists and notes default to **10 rows per page**, with 10 / 20 / 50 / 100 options. Order history uses 10 rows per page.
+Token headings use `symbol (name)`, omitting duplicates or missing fields. Market quotes and estimates are not necessarily executed trade prices. Existing Telegram messages are not rewritten when settings change.
 
-## Settings have different scopes
+XXYY trend, multiple and related report messages retain the original Chinese content, layout, buttons and image descriptions. They are not translated by the generic interface-language setting.
 
-| Setting | Scope |
-| --- | --- |
-| Panel visibility, theme, position, token card, interface language | Display on this browser; closing the panel does not stop server monitoring or Telegram alerts |
-| Browser alerts | Desktop notifications, subject to Chrome and operating system permissions |
-| Telegram destination rules and language | Content sent to that group / channel, independent of panel filters and browser alerts |
+Telegram forwarding account credentials and sessions are encrypted per user; forwarding account login is separate from the notification Bot configuration. Saved sensitive configuration is masked by default, with owner-scoped reveal controls for supported fields. Login sessions, codes and two-step passwords are not revealed.
 
-Notes belong to the current Arova user and do not change platform names or follow relationships. Each Telegram destination can show or hide them. Changes do not rewrite previously sent messages. Source posts, names, notes, token names, and administrator-written plan descriptions retain their original language.
+## Coverage limits
 
-## Service access
+- Only activity after the configured monitoring start is expected; old history is not backfilled automatically.
+- Internal EVM native-currency transfers and complex routes are not fully covered.
+- Cross-chain receipts without source ownership evidence are treated as incoming transfers. A buys-only filter can therefore omit some genuine cross-chain buys.
+- Arova smart-wallet/resonance signals, legacy platform feeds, Pump Top and Fomo/Pump login-renewal entry points are retired.
+- This release does not implement automated trading, an Arova Alpha Score, or guaranteed performance.
 
-**Plans & access** shows free mode, expiry, permanent access, or suspension. Operators can grant time or unlimited access. Payments and manual grants are reflected by the server.
-
-No purchase is needed while access is free. Prices, durations, networks, and stablecoins depend on available plans and checkout. Payment cannot start without an available plan. Permanent access has no expiry but can still be changed or suspended by a super administrator.
-
-The user's extension settings page is separate from the internal administration console. Buying a plan or receiving permanent access does not grant administrator permissions.
-
-## Scope and authorization boundaries
-
-- This version provides monitoring and alerts, not automated buying / selling, swaps, copy trading, or an Arova Alpha Score / backtest.
-- Platform activity, opinions, and rankings are not promises of returns. Consider the timestamp, source, and original content.
-- Arova wallet sign-in proves identity. It is separate from Pump server key custody.
-- Server renewal is experimental. Fomo long-lived sessions and full Pump Solana private keys are not read-only access. Read [Renewal methods](USAGE.md#renewal-methods) first.
-- This public repository distributes official builds and documentation. Application source remains private; see [LICENSE](LICENSE).
-
-Growth alerts in v0.0.1-beta.1 share a card with chain, token, full copyable contract, actual multiple, current price and market cap. Missing quotes are labeled unavailable. Price, provider-first-alert and wallet market-cap baselines are labeled separately. Telegram replies to the corresponding first contract notification in the same account, destination and source when its receipt is available; older messages without receipts cannot be linked. Update the extension folder and reload Arova to use the new layout.
+[License](LICENSE) · [Setup and troubleshooting](USAGE.md)

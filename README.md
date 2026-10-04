@@ -2,55 +2,36 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-[Download current and previous versions](https://github.com/spencer17x/arova-releases/releases)
+[Download releases](https://github.com/spencer17x/arova-releases/releases) · [Features](FEATURES.md) · [User guide](USAGE.md)
 
-[Features](FEATURES.md) · [User guide](USAGE.md)
+This repository distributes official compiled Arova Chrome packages, checksums and release metadata. Application source and private development history are not included.
 
-This is Arova's official public download repository. It distributes compiled Chrome extension packages, SHA256 checksums, and release information. You do not need access to the private development repository or the Chrome Web Store.
+Arova combines public GigaX discovery with private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet, RPC and notification settings are managed separately.
 
-Arova brings Fomo / Pump activity to supported XXYY, GMGN, and DeBot trading pages, with private account notes, browser alerts, and Telegram notifications to multiple destinations. Configure your account in the standalone settings page; use the floating panel to view alerts and quick controls.
+The current client replaces the former Fomo/Pump connection workflow with wallet addresses. It does not require Fomo/Pump sessions or private keys. Legacy platform feeds, Pump Top and Arova smart-wallet/resonance signals are retired.
 
-The extension supports English and Simplified Chinese. It follows the browser language by default, with a manual override in the settings sidebar. Each Telegram destination has its own alert language.
+## Install or update
 
-## Start here
-
-| Task | Documentation |
-| --- | --- |
-| Explore supported platforms and capabilities | [Features](FEATURES.md) |
-| Install or update | [Installation and updates](USAGE.md#installation-and-updates) |
-| Set up for the first time | [Quick start](USAGE.md#quick-start) |
-| Connect Fomo / Pump with server renewal | [Connect monitoring sources](USAGE.md#connect-monitoring-sources), [Renewal methods](USAGE.md#renewal-methods) |
-| Send alerts to Telegram groups / channels | [Telegram alerts](USAGE.md#telegram-alerts) |
-| Check paid, gifted, or permanent access | [Plans and access](USAGE.md#plans-and-access) |
-| Troubleshoot loading, sign-in, or alerts | [Troubleshooting](USAGE.md#troubleshooting) |
-
-## Installation and updates
-
-1. Download `arova-chrome-VERSION.zip` from Releases and extract it to a folder you will keep.
+1. Download `arova-chrome-VERSION.zip` from Releases and extract it to a permanent folder.
 2. Open `chrome://extensions` and enable **Developer mode**.
-3. Click **Load unpacked** and select the extracted folder containing `manifest.json`.
-4. Click the Arova toolbar icon to open settings, sign in, and configure the features you need.
+3. For a first install, choose **Load unpacked** and select the folder containing `manifest.json`.
+4. For an update, replace the contents of the original folder, click **Reload**, then refresh trading pages. Keep the existing extension installed to retain browser settings.
+5. Click the Arova toolbar icon, sign in, and add wallet addresses and notification destinations.
 
-To update, replace the contents of the original folder with the new package, click **Reload** for Arova in Chrome extensions, then refresh your trading pages. Do not uninstall first if you want to keep browser settings. GitHub packages do not automatically update installed extensions.
-
-A beta may be rebuilt under the same version name. Compare the build identifier in `release-info.json` and the checksum in `SHA256SUMS` to distinguish builds.
+GitHub ZIP packages do not update automatically. Install the extension ZIP, not GitHub's **Source code** archive. Beta versions remain prereleases; use the specific release page rather than relying on GitHub's Latest shortcut.
 
 ## Release contents
 
-- `arova-chrome-VERSION.zip`: official extension package.
-- `SHA256SUMS`: SHA256 checksum of the package.
-- `release-info.json`: version, build identifier, extension ID, production API, and checksum.
+- `arova-chrome-VERSION.zip`: extension package, including proprietary and third-party notices.
+- `SHA256SUMS`: package checksum.
+- `release-info.json`: version, build commit, production API, extension ID and checksum.
 
-Fixed extension ID: `gedflalfmklfccgaabdbcnjjchlfemfo`.
+Fixed extension ID: `gedflalfmklfccgaabdbcnjjchlfemfo`. Production API: `https://api.arova.top`.
 
-Public tags represent distribution snapshots. GitHub's automatically generated **Source code** ZIP/TAR contains only this repository's documentation, publishing configuration, and build artifacts. Install `arova-chrome-VERSION.zip` instead.
+Public tags are isolated distribution snapshots. Automatic Source code archives contain public documentation and distribution artifacts, not the private application repository. Compiled JavaScript needed by the extension is included in the extension package.
 
-This repository does not contain Arova's TypeScript / Python application source, server code, private Git history, environment configuration, or secrets. Extension packages contain the compiled JavaScript required to run.
+## Scope and license
 
-## License
+Arova provides monitoring and alerts, not automatic trading or guaranteed investment returns. Missing RPC history, unsupported routes and uncertain cross-chain ownership can reduce coverage. See the [user guide](USAGE.md).
 
-Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Public downloads do not make the application open source. Third-party licenses and copyright notices remain in the package's `THIRD_PARTY_NOTICES.txt`. Account access and available plans are controlled by the Arova server.
-
-[Illustrated walkthrough](USAGE.md#illustrated-walkthrough)
-
-Growth alerts in v0.0.1-beta.1 share a card with chain, token, full copyable contract, actual multiple, current price and market cap. Missing quotes are labeled unavailable. Price, provider-first-alert and wallet market-cap baselines are labeled separately. Telegram replies to the corresponding first contract notification in the same account, destination and source when its receipt is available; older messages without receipts cannot be linked. Update the extension folder and reload Arova to use the new layout.
+Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Third-party notices remain in `THIRD_PARTY_NOTICES.txt`. Public downloads do not make the application open source. Plans and account access are controlled by the server.
