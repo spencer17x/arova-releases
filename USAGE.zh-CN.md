@@ -1,5 +1,7 @@
 # Arova 使用指南
 
+[Fomo 钱包监控与 RPC 图文指南](https://arova.top/#guide)：包含免费 RPC 额度、配置截图和排障步骤，无需平台登录会话或钱包私钥。
+
 [English](USAGE.md) | **简体中文**
 
 更新：2026-10-04。适用于 beta.2 及兼容服务。

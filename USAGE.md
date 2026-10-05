@@ -1,5 +1,7 @@
 # Arova user guide
 
+[Illustrated Fomo wallet monitoring and RPC guide](https://arova.top/#guide) — includes current free RPC allowances, setup screenshots and troubleshooting. No platform login session or private key is needed.
+
 **English** | [简体中文](USAGE.zh-CN.md)
 
 Updated: 2026-10-04. Applies to beta.2 and the compatible service.
