@@ -37,3 +37,5 @@ Telegram forwarding account credentials and sessions are encrypted per user; for
 - This release does not implement automated trading, an Arova Alpha Score, or guaranteed performance.
 
 [License](LICENSE) · [Setup and troubleshooting](USAGE.md)
+
+Membership preparation: Free includes 10 wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). Purchases and new-account trial rules remain disabled, and existing gifts are preserved. Memberships use calendar months/years and manual renewal, prorated upgrades within the same billing interval, and next-period downgrades. Annual forwarding allowances reset monthly. The website and extension show membership status.
