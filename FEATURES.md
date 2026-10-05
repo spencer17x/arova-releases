@@ -12,7 +12,8 @@ Updated: 2026-10-04. Applies to the beta.2 client and compatible deployed servic
 | Wallet monitoring | Add a wallet address, select compatible chains and choose buys, sells, incoming transfers, outgoing transfers or other activity |
 | Networks | Solana, Ethereum, BSC, Base and Robinhood |
 | Shared workspace | Website and extension use the same account data, private notes and server-side monitoring rules |
-| RPC settings | Users manage and select RPC nodes for their own wallet monitoring; credentials are encrypted and isolated by user |
+| Monitoring infrastructure | Platform-managed RPC nodes; no user setup required. Existing private credentials remain encrypted until explicitly cleared by their owner |
+| Wallet allowance | Initial 100 active addresses; one address across multiple chains uses one slot. Pausing releases it. Plan limits and expiry appear in the account |
 | Wallet cards | Token identity, chain, full contract, asset flows, timestamps and transaction links; uncertain or missing values remain labeled |
 | Routed trades | Evidence-based settlement without inventing wallet debits or credits; a router payout alone does not establish that the recipient bought |
 | Telegram | Independent destinations, rules, languages and note visibility; saving and sending a test are separate actions |

@@ -6,7 +6,7 @@
 
 This repository distributes official compiled Arova Chrome packages, checksums and release metadata. Application source and private development history are not included.
 
-Arova combines public GigaX discovery with private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet, RPC and notification settings are managed separately.
+Arova combines public GigaX discovery with private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet and notification settings are managed separately. Arova manages monitoring RPC nodes. Accounts start with 100 active-address slots; multi-chain monitoring of the same address uses one slot, and pausing releases it.
 
 The current client replaces the former Fomo/Pump connection workflow with wallet addresses. It does not require Fomo/Pump sessions or private keys. Legacy platform feeds, Pump Top and Arova smart-wallet/resonance signals are retired.
 
