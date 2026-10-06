@@ -4,7 +4,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-10-05. Applies to beta.3 and the compatible service.
+Updated: 2026-10-06. Applies to beta.6 and the compatible service.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [Features](FEATURES.md) · [Home](README.md)
 
@@ -27,7 +27,7 @@ Wallet monitoring does not require a Fomo/Pump login session or private key. A t
 
 ## Wallets, allowances and transaction types
 
-Accounts start with 100 active-address slots. One address across multiple chains uses one slot; pausing releases it. The initial allowance currently has no end date, which is not a promise of permanent free access. Check your account for its allowance and expiry. Old private RPC credentials remain encrypted until you explicitly clear them in account settings.
+Free accounts have 10 active-address slots. One address across multiple chains uses one slot; pausing releases it. Check your account for its allowance and expiry. Old private RPC credentials remain encrypted until you explicitly clear them in account settings.
 
 A wallet can monitor one or more compatible networks. Enable or pause each record independently. Private notes belong to your Arova account. Saved operation filters determine which events enter your wallet activity and notifications.
 
@@ -76,8 +76,8 @@ Check the account's current access and available plans in settings. Orders freez
 
 When reporting a problem, include the release/build, time, chain and a transaction link where relevant. Redact credentials, private notes, group identifiers and unrelated account data. Never send passwords, keys, cookies or login codes.
 
-Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.3.
+Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.6.
 
-Membership preparation: Free includes 10 wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). Purchases and new-account trial rules remain disabled, and existing gifts are preserved. Memberships use calendar months/years and manual renewal, prorated upgrades within the same billing interval, and next-period downgrades. Annual forwarding allowances reset monthly. The website and extension show membership status.
+Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
 GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
