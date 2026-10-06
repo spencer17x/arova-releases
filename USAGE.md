@@ -79,3 +79,5 @@ When reporting a problem, include the release/build, time, chain and a transacti
 Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.3.
 
 Membership preparation: Free includes 10 wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). Purchases and new-account trial rules remain disabled, and existing gifts are preserved. Memberships use calendar months/years and manual renewal, prorated upgrades within the same billing interval, and next-period downgrades. Annual forwarding allowances reset monthly. The website and extension show membership status.
+
+GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
