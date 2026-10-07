@@ -1,10 +1,10 @@
 # Arova user guide
 
-[Illustrated Fomo wallet monitoring guide](https://arova.top/#guide) — includes wallet setup, allowances and troubleshooting. No RPC setup, platform login session or private key is needed.
+[Online Arova user guide](https://arova.top/#guide) — includes sign-in, wallets, plans, payments and troubleshooting. No RPC setup, platform login session or private key is needed.
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-10-06. Applies to beta.6 and the compatible service.
+Updated: 2026-10-07. Covers the current website/service and the beta.6 extension. Website updates do not automatically update the extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [Features](FEATURES.md) · [Home](README.md)
 
@@ -13,6 +13,12 @@ Updated: 2026-10-06. Applies to beta.6 and the compatible service.
 Download the extension ZIP, extract it, and load the folder containing `manifest.json` through **Load unpacked** in `chrome://extensions` with Developer mode enabled. To update, replace the contents of the original folder, reload Arova, and refresh trading pages. Do not uninstall first if you want to retain local settings. GitHub packages do not update automatically.
 
 Use `SHA256SUMS` and `release-info.json` to verify the downloaded package and build. The Source code archives are not installation packages.
+
+## Sign-in and refresh
+
+The website and extension share account data but store separate sign-in sessions. Signing in to the extension does not sign you in to the website. On refresh, the website verifies the session before showing the page, then loads account settings separately. Use Reconnect for network errors and Retry for settings errors; sign in again when the session expires.
+
+The website and admin interface include the October 7, 2026 login, purchase-switch and plan-layout fixes. The public extension remains beta.6 and does not include these separately unpublished frontend fixes. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
 
 ## Quick start
 
@@ -57,15 +63,32 @@ The interface follows the browser language by default and supports a local Engli
 
 Configure sound and custom audio in preferences. Closing the panel, closing Chrome, or signing out does not by itself revoke server-side monitoring or stored credentials. Use the relevant monitoring or account controls.
 
-## Plans and access
+## Plans, access and payments
 
-Check the account's current access and available plans in settings. Orders freeze wallet capacity and duration. Same-tier periods extend sequentially; different tiers run independently. If capacity expires, the oldest addresses within the allowance remain enabled and excess addresses pause. History and notes remain; re-enable wallets after renewal. Prices, duration, payment options and eligibility are determined by the service. No payment is required while free access applies. A plan does not grant internal administrator access. This guide does not authorize trades or custody of wallet private keys.
+Open Settings → Plans and access for your current plan, wallet usage, monthly/yearly plans and orders. All accounts follow the same rules: no registration-date exemptions, automatic 100-wallet gifts or automatic trials. Purchased memberships and individual administrator grants retain their terms.
+
+| Tier | Default active wallets | Default price / activation |
+| --- | --- | --- |
+| Free | 10 | Free basic access |
+| Plus | 100 | $29/month or $290/year |
+| Pro | 300 | $79/month or $790/year |
+| Unlimit | No plan quota | Contact for an explicit grant |
+
+These are default plans; the plan page and frozen order determine the applicable price, limits and term. Plans that are not open for purchase can still be compared but cannot be ordered. Removed plans are hidden. A plan does not grant administrator access or access to another account's data.
+
+The subscription-purchase switch controls only new orders and initiating payments. Closing purchases does not remove quotas, block Free features or cancel existing memberships. **Purchases are currently closed.** Previously submitted payments continue to be verified; do not pay again.
+
+When purchases open, new subscriptions accept only **native Circle USDC on Solana**. SOL is for network fees. Follow a valid order and approve the signature yourself in your wallet; do not send funds to expired orders or on another network. Memberships use calendar months/years with manual renewal and no automatic charges. Annual forwarding allowances reset monthly. Upgrades within the same billing interval are prorated; downgrades take effect next period.
+
+Unlimit requires an explicit account grant; a username or role does not grant it automatically. Contact [thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Security checks, account suspension and provider rate limits still apply. Revocation or expiry returns the account to its valid membership, or Free. A legacy permanent-duration grant is not an Unlimit quota grant.
+
+One address across multiple chains uses one slot; pausing releases it. If expiry puts an account over its allowance, the earliest-added wallets within the allowance remain active and the rest pause. Addresses, notes and history remain; re-enable wallets after restoring capacity. Neither a plan nor this guide authorizes trading or custody of wallet private keys.
 
 ## Troubleshooting
 
 | Problem | Check |
 | --- | --- |
-| Old interface | Replace the original folder, reload the extension and refresh trading pages |
+| Old interface | Refresh or force-refresh the website; for the extension, replace its folder, reload it and refresh trading pages |
 | Missing activity | Wallet enabled state, selected networks/operations, monitoring boundary, RPC status and account access |
 | Missing buy alert for a cross-chain receipt | It may be classified as an incoming transfer because ownership is unverified |
 | No panel | Supported page, panel visibility, extension site permissions and page reload |
@@ -77,7 +100,5 @@ Check the account's current access and available plans in settings. Orders freez
 When reporting a problem, include the release/build, time, chain and a transaction link where relevant. Redact credentials, private notes, group identifiers and unrelated account data. Never send passwords, keys, cookies or login codes.
 
 Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.6.
-
-Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
 GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.

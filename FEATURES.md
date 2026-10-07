@@ -2,7 +2,7 @@
 
 **English** | [简体中文](FEATURES.zh-CN.md)
 
-Updated: 2026-10-06. Applies to the beta.6 client and compatible deployed service.
+Updated: 2026-10-07. Covers the current website/service and the beta.6 extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
@@ -41,3 +41,5 @@ Telegram forwarding account credentials and sessions are encrypted per user; for
 Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
 GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
+
+The website and admin interface include the October 7, 2026 updates: session verification shows a loading state, plan comparisons and contact-button alignment are corrected, and the purchase switch controls new orders without changing plan access. Purchases remain closed. The public extension is still beta.6; website deployments do not update extension files. See the [user guide](USAGE.md).
