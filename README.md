@@ -6,9 +6,15 @@
 
 This repository distributes official compiled Arova Chrome packages, checksums and release metadata. Application source and private development history are not included.
 
-Arova combines public GigaX discovery with private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet and notification settings are managed separately. Arova manages monitoring RPC nodes. Free accounts have 10 active-address slots; multi-chain monitoring of the same address uses one slot, and pausing releases it.
+Arova combines Smart Money signals, Trend signals, Growth tracking and private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet and notification settings are managed separately. Arova manages monitoring RPC nodes. Free accounts have 10 active-address slots; multi-chain monitoring of the same address uses one slot, and pausing releases it.
 
-The current client replaces the former Fomo/Pump connection workflow with wallet addresses. It does not require Fomo/Pump sessions or private keys. Legacy platform feeds, Pump Top and Arova smart-wallet/resonance signals are retired.
+Wallet monitoring is configured by address, without third-party login sessions or wallet private keys. Signal alerts and personal wallet monitoring can be configured separately.
+
+## Signal guide
+
+- **Arova Smart Money**: smart-wallet activity signals, available in public discovery.
+- **Arova Trend**: trend and anomaly signals for your account.
+- **Growth tracking**: later multiple changes relative to the relevant signal baseline, not realized trading returns.
 
 ## Install or update
 
@@ -38,6 +44,6 @@ Arova uses a proprietary commercial license; see [LICENSE](LICENSE). Third-party
 
 Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
-GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
+Arova Smart Money cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-The website and admin interface include the October 7, 2026 updates: session verification shows a loading state, plan comparisons and contact-button alignment are corrected, and the purchase switch controls new orders without changing plan access. Purchases remain closed. The public extension is still beta.6; website deployments do not update extension files. See the [user guide](USAGE.md).
+The current website and new Telegram notifications use Arova Smart Money, Arova Trend and Growth tracking. The public extension remains beta.6 and may show older interface labels; this documentation update does not publish a new installation package. Purchases remain closed. See the [user guide](USAGE.md).

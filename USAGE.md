@@ -4,9 +4,9 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-10-07. Covers the current website/service and the beta.6 extension. Website updates do not automatically update the extension.
+Updated: 2026-10-08. Covers the current website/service and the beta.6 extension. Website updates do not automatically update the extension.
 
-[Download](https://github.com/spencer17x/arova-releases/releases) · [Features](FEATURES.md) · [Home](README.md)
+[Download](https://github.com/spencer17x/arova-releases/releases) · [Features](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.md) · [Home](README.md)
 
 ## Installation and updates
 
@@ -18,7 +18,7 @@ Use `SHA256SUMS` and `release-info.json` to verify the downloaded package and bu
 
 The website and extension share account data but store separate sign-in sessions. Signing in to the extension does not sign you in to the website. On refresh, the website verifies the session before showing the page, then loads account settings separately. Use Reconnect for network errors and Retry for settings errors; sign in again when the session expires.
 
-The website and admin interface include the October 7, 2026 login, purchase-switch and plan-layout fixes. The public extension remains beta.6 and does not include these separately unpublished frontend fixes. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
+The current website and new Telegram notifications use the signal names in this guide. The public extension remains beta.6 and may show older interface labels; these website updates are not a new extension release. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
 
 ## Quick start
 
@@ -51,7 +51,9 @@ Check both the main notification switch and the destination's enabled state. Eac
 
 ## Trend monitors and Telegram forwarding
 
-Use the dedicated settings to configure trend monitors or forwarding rules. Select supported chains individually or together. XXYY trend and multiple messages keep their original Chinese format even when the interface is English.
+**Arova Smart Money** highlights smart-wallet activity and is available in public discovery. **Arova Trend** covers trend and anomaly signals for the signed-in account. **Growth tracking** shows subsequent multiple changes relative to the relevant signal baseline; it is not a realized trading return.
+
+Use the dedicated settings to configure trend monitors or forwarding rules. Select supported chains individually or together. Arova Trend notifications use Chinese body text even when the interface is English.
 
 Forwarding uses a Telegram account login with API ID/API Hash and the required login steps; the notification Bot has separate settings. Follow the current page's instructions, review credential handling, and enter sensitive values only in the intended form. Saved fields are masked; reveal supported fields only when necessary. The session, login code and two-step password are not exportable through reveal controls.
 
@@ -59,7 +61,7 @@ Review the selected monitor before confirming deletion. Removing a monitor affec
 
 ## Language, sound and display
 
-The interface follows the browser language by default and supports a local English/Simplified Chinese override. Each Telegram target saves its own language. Source text, token names and private notes are not translated; XXYY trend messages retain their original format.
+The interface follows the browser language by default and supports a local English/Simplified Chinese override. Each Telegram target saves its own language. Source text, token names and private notes are not translated; Arova Trend message bodies remain in Chinese.
 
 Configure sound and custom audio in preferences. Closing the panel, closing Chrome, or signing out does not by itself revoke server-side monitoring or stored credentials. Use the relevant monitoring or account controls.
 
@@ -101,4 +103,4 @@ When reporting a problem, include the release/build, time, chain and a transacti
 
 Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.6.
 
-GigaX cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
+Arova Smart Money cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
