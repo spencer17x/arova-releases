@@ -2,7 +2,7 @@
 
 [English](FEATURES.md) | **简体中文**
 
-更新：2026-10-08。适用于当前网站/服务端与 beta.6 插件。
+更新：2026-10-08。适用于当前网站/服务端与 beta.7 插件。
 
 [下载](https://github.com/spencer17x/arova-releases/releases) · [使用指南](USAGE.zh-CN.md) · [首页](README.zh-CN.md)
 
@@ -44,4 +44,4 @@ TG 转发账号凭据及会话按用户加密隔离；转发账号登录与通�
 
 Fomo 信号卡片与通知展示市值、涨幅、合约和相关正文，不展示价格行。
 
-网站和新发 Telegram 通知已使用 Fomo 信号、Arova 趋势与涨幅追踪。公开插件仍为 beta.6，部分界面可能保留旧标签；本次文档更新未发布新的安装包。购买仍关闭；完整步骤见[使用指南](USAGE.zh-CN.md)。
+本指南适用于网站和 beta.7 插件，包含 Fomo 信号、Arova 趋势、涨幅追踪及当前账号设置。可下载版本以发布页为准。购买仍关闭；完整步骤见[使用指南](USAGE.zh-CN.md)。
