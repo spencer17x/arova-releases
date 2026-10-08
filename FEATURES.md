@@ -8,7 +8,7 @@ Updated: 2026-10-08. Covers the current website/service and the beta.6 extension
 
 | Capability | Current behavior |
 | --- | --- |
-| Arova Smart Money | Highlights smart-wallet activity and is available in public discovery |
+| Fomo Signals | Highlights smart-wallet activity and is available in public discovery |
 | Arova Trend | Shows the signed-in account’s trend and anomaly signals |
 | Growth tracking | Shows later multiple changes relative to the relevant signal baseline |
 | Wallet monitoring | Add a wallet address, select compatible chains and choose buys, sells, incoming transfers, outgoing transfers or other activity |
@@ -42,6 +42,6 @@ Telegram forwarding account credentials and sessions are encrypted per user; for
 
 Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
-Arova Smart Money cards and notifications show market cap, growth, the contract and related text, without a price row.
+Fomo Signals cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-The current website and new Telegram notifications use Arova Smart Money, Arova Trend and Growth tracking. The public extension remains beta.6 and may show older interface labels; this documentation update does not publish a new installation package. Purchases remain closed. See the [user guide](USAGE.md).
+The current website and new Telegram notifications use Fomo Signals, Arova Trend and Growth tracking. The public extension remains beta.6 and may show older interface labels; this documentation update does not publish a new installation package. Purchases remain closed. See the [user guide](USAGE.md).

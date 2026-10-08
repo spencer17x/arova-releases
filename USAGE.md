@@ -51,7 +51,7 @@ Check both the main notification switch and the destination's enabled state. Eac
 
 ## Trend monitors and Telegram forwarding
 
-**Arova Smart Money** highlights smart-wallet activity and is available in public discovery. **Arova Trend** covers trend and anomaly signals for the signed-in account. **Growth tracking** shows subsequent multiple changes relative to the relevant signal baseline; it is not a realized trading return.
+**Fomo Signals** highlight smart-wallet activity and are available in public discovery. **Arova Trend** covers trend and anomaly signals for the signed-in account. **Growth tracking** shows subsequent multiple changes relative to the relevant signal baseline; it is not a realized trading return.
 
 Use the dedicated settings to configure trend monitors or forwarding rules. Select supported chains individually or together. Arova Trend notifications use Chinese body text even when the interface is English.
 
@@ -103,4 +103,4 @@ When reporting a problem, include the release/build, time, chain and a transacti
 
 Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.6.
 
-Arova Smart Money cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
+Fomo Signals cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
