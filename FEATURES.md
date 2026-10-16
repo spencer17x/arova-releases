@@ -2,7 +2,7 @@
 
 **English** | [简体中文](FEATURES.zh-CN.md)
 
-Updated: 2026-10-08. Covers the current website/service and the beta.8 extension.
+Updated: 2026-10-16. Covers the current website/service and the beta.9 extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
@@ -40,10 +40,10 @@ Telegram forwarding account credentials and sessions are encrypted per user; for
 
 [License](LICENSE) · [Setup and troubleshooting](USAGE.md)
 
-Memberships: Free includes 10 active wallets; Plus includes 100 ($29/month or $290/year); Pro includes 300 ($79/month or $790/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases remain disabled. When enabled, subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
+Memberships: Free includes 10 active wallets; Plus includes 100 (29 USDC/month or 290 USDC/year); Pro includes 300 (79 USDC/month or 790 USDC/year). All accounts follow the same rules. Automatic 100-wallet signup gifts and trials have ended; purchased memberships and individual administrator gifts retain their terms. Excess wallets are paused with addresses, notes and history retained. Purchases are open. Subscription payments accept only native Circle USDC on Solana, with manual renewal and SOL for network fees. Memberships use calendar months/years; annual forwarding allowances reset monthly. Unlimit removes plan quotas through an explicit account grant: [contact thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Account isolation, suspension and platform/provider rate limits still apply.
 
 Fomo Signals cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-This guide covers the website and beta.8 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases remain closed. See the [user guide](USAGE.md).
+This guide covers the website and beta.9 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
 
 Token details retain update times and cached-data indicators. Trading links keep their destination names; updating preserves saved monitoring and notification rules.
