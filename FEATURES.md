@@ -2,13 +2,15 @@
 
 **English** | [简体中文](FEATURES.zh-CN.md)
 
-Updated: 2026-10-16. Covers the current website/service and the beta.9 extension.
+Updated: 2026-10-18. Covers the current website/service and the beta.10 extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [User guide](USAGE.md) · [Home](README.md)
 
 | Capability | Current behavior |
 | --- | --- |
-| Fomo Signals | Highlights smart-wallet activity and is available in public discovery |
+| Fomo Signals | Highlights smart-wallet activity and is available in public discovery; reception is managed by Arova and users do not manage receiver credentials |
+| SOL balance check | Checkout includes the receiving-account deposit, network fee and the paying wallet's rent-exempt minimum; insufficient SOL blocks signing and offers a balance recheck |
+| Chain delay notices | Shown only for chains with a saved wallet; wallet and chain-status polling pauses while the browser tab is hidden |
 | Arova Trend | Shows the signed-in account’s trend and anomaly signals |
 | Growth tracking | Shows later multiple changes relative to the relevant signal baseline |
 | Wallet monitoring | Add a wallet address, select compatible chains and choose buys, sells, incoming transfers, outgoing transfers or other activity |
@@ -44,6 +46,6 @@ Memberships: Free includes 10 active wallets; Plus includes 100 (29 USDC/month o
 
 Fomo Signals cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-This guide covers the website and beta.9 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
+This guide covers the website and beta.10 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
 
 Token details retain update times and cached-data indicators. Trading links keep their destination names; updating preserves saved monitoring and notification rules.

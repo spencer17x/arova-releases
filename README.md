@@ -8,7 +8,7 @@ This repository distributes official compiled Arova Chrome packages, checksums a
 
 Arova combines Fomo signals, Trend signals, Growth tracking and private, address-based wallet monitoring. The website and Chrome extension share account data. The extension displays notifications on supported XXYY, GMGN and DeBot pages; account, wallet and notification settings are managed separately. Arova manages monitoring RPC nodes. Free accounts have 10 active-address slots; multi-chain monitoring of the same address uses one slot, and pausing releases it.
 
-Wallet monitoring is configured by address, without third-party login sessions or wallet private keys. Signal alerts and personal wallet monitoring can be configured separately.
+Wallet monitoring is configured by address, without third-party login sessions or wallet private keys. Signal alerts and personal wallet monitoring can be configured separately. Fomo Signals reception is managed by Arova; the current client does not show receiver credential controls. Chain-delay notices appear only for chains with a saved wallet, and polling pauses while the browser tab is hidden. Checkout includes the paying wallet's rent-exempt SOL minimum in its balance check.
 
 ## Signal guide
 
@@ -46,6 +46,6 @@ Memberships: Free includes 10 active wallets; Plus includes 100 (29 USDC/month o
 
 Fomo Signals cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-This guide covers the website and beta.9 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
+This guide covers the website and beta.10 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
 
 Token details retain update times and cached-data indicators. Trading links keep their destination names; updating preserves saved monitoring and notification rules.

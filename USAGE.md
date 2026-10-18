@@ -4,7 +4,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-10-16. Covers the current website/service and the beta.9 extension. Website updates do not automatically update the extension.
+Updated: 2026-10-18. Covers the current website/service and the beta.10 extension. Website updates do not automatically update the extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [Features](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.md) · [Home](README.md)
 
@@ -18,7 +18,7 @@ Use `SHA256SUMS` and `release-info.json` to verify the downloaded package and bu
 
 The website and extension share account data but store separate sign-in sessions. Signing in to the extension does not sign you in to the website. On refresh, the website verifies the session before showing the page, then loads account settings separately. Use Reconnect for network errors and Retry for settings errors; sign in again when the session expires.
 
-This guide covers the website and beta.9 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
+This guide covers the website and beta.10 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
 
 ## Quick start
 
@@ -30,6 +30,8 @@ This guide covers the website and beta.9 extension, including Fomo Signals, Arov
 6. Configure browser alerts or Telegram destinations separately if needed.
 
 Wallet monitoring does not require a Fomo/Pump login session or private key. A token contract or platform account ID is not a substitute for a wallet address. Existing legacy authorization materials, if present, have a separate explicit cleanup control in account settings; updating the extension does not automatically revoke them.
+
+Fomo Signals reception is managed by Arova. The current client does not show receiver credential controls; choose signal types and notification destinations in settings. Chain-delay notices appear only for chains where the account has a saved wallet, including a paused wallet, and polling pauses while the browser tab is hidden.
 
 ## Wallets, allowances and transaction types
 
@@ -82,7 +84,7 @@ The subscription-purchase switch controls only new orders and initiating payment
 
 New subscriptions accept only **native Circle USDC on Solana**. SOL is for network fees. Follow a valid order and approve the signature yourself in your wallet; do not send funds to expired orders or on another network. Transfers of other tokens or on other chains are not credited automatically. Memberships use calendar months/years with manual renewal and no automatic charges. Annual forwarding allowances reset monthly. Upgrades within the same billing interval are prorated; downgrades take effect next period.
 
-Plus is marked as recommended. When only one payment channel is available, the plan page shows the network and stablecoin instead of a dropdown. At 7, 3 and 1 days before expiry, the page shows the remaining days, the end date and a renew action. There is no automatic email or Telegram reminder. When the wallet allowance is full, the page compares the current allowance with the next plan. Checkout keeps an insufficient-balance or network-fee warning above the pay button and shows the time left on the quote. Once a payment is detected or confirming, there is no need to pay again. If a payment arrives after the quote expires, or the payment does not match the order, checkout says the money will not be lost and not to pay again.
+Plus is marked as recommended. When only one payment channel is available, the plan page shows the network and stablecoin instead of a dropdown. At 7, 3 and 1 days before expiry, the page shows the remaining days, the end date and a renew action. There is no automatic email or Telegram reminder. When the wallet allowance is full, the page compares the current allowance with the next plan. Checkout keeps an insufficient-balance or network-fee warning above the pay button and shows the time left on the quote. The SOL check includes the receiving-account deposit, network fee and the paying wallet's rent-exempt minimum; if SOL is short, the pay button is disabled and the page offers a balance recheck. Once a payment is detected or confirming, there is no need to pay again. If a payment arrives after the quote expires, or the payment does not match the order, checkout says the money will not be lost and not to pay again.
 
 Unlimit requires an explicit account grant; a username or role does not grant it automatically. Contact [thugz on Telegram](https://t.me/thugz1) or [X](https://x.com/thugz001). Security checks, account suspension and provider rate limits still apply. Revocation or expiry returns the account to its valid membership, or Free. A legacy permanent-duration grant is not an Unlimit quota grant.
 
@@ -103,7 +105,7 @@ One address across multiple chains uses one slot; pausing releases it. If expiry
 
 When reporting a problem, include the release/build, time, chain and a transaction link where relevant. Redact credentials, private notes, group identifiers and unrelated account data. Never send passwords, keys, cookies or login codes.
 
-Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.9.
+Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.10.
 
 Fomo Signals cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
 
@@ -112,4 +114,4 @@ Token details retain update times and cached-data indicators. Trading links keep
 
 ## Receiving-account creation
 
-If the receiving account needs to be created, the paying wallet covers its SOL creation cost separately from the USDC plan amount. Checkout shows an estimate before the wallet signature; review the actual cost in the wallet. Creation and payment are in one transaction, and access is granted only after the USDC payment is verified.
+If the receiving account needs to be created, the paying wallet covers its SOL creation cost separately from the USDC plan amount. The pre-sign check also reserves the paying wallet's rent-exempt SOL minimum so the transaction does not fail after signing. Checkout shows an estimate before the wallet signature; review the actual cost in the wallet. Creation and payment are in one transaction, and access is granted only after the USDC payment is verified.
