@@ -1,0 +1,35 @@
+Arova Proprietary License
+SPDX-License-Identifier: LicenseRef-Arova-Proprietary
+
+Copyright (c) 2026 Arova contributors. All rights reserved.
+
+This notice applies to original Arova software, documentation and assets
+distributed with this notice (the "Software"). The Software is proprietary
+and is not offered under an open-source license.
+
+Authorized users may install and run official, unmodified Arova client builds
+solely to access Arova services. This permission does not grant access to paid
+features or services without the applicable authorization. Other commercial
+licensing arrangements require a separate written agreement with the relevant
+copyright holder(s).
+
+Except for that limited client use, a separate written authorization, or rights
+that cannot be excluded under applicable law, no permission is granted to copy,
+modify, publish, distribute, sublicense, sell, lease, or provide a hosted service
+using the Software. Access to the repository, source code or a binary does not
+by itself grant any of those rights. No rights to Arova trademarks or branding
+are granted except as necessary for authorized use of the official client.
+
+Third-party components remain subject to their respective licenses and
+copyright notices. This notice does not replace, restrict or revoke rights
+granted by those licenses. Retain the accompanying third-party notices.
+
+This notice applies to versions distributed with it. It does not purport to
+revoke permissions previously granted for earlier versions under another
+license, including MIT.
+
+Unless otherwise agreed in writing and to the extent permitted by applicable
+law, the Software is provided "AS IS", without warranties of any kind, express
+or implied. The copyright holders disclaim liability for claims, damages or
+other liability arising from the Software or its use to the extent permitted
+by applicable law.
