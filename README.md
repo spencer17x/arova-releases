@@ -46,6 +46,6 @@ Memberships: Free includes 10 active wallets; Plus includes 100 (29 USDC/month o
 
 Fomo Signals cards and notifications show market cap, growth, the contract and related text, without a price row.
 
-This guide covers the website and beta.10 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
+This guide covers the website and beta.11 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Purchases are open. See the [user guide](USAGE.md).
 
 Token details retain update times and cached-data indicators. Trading links keep their destination names; updating preserves saved monitoring and notification rules.
