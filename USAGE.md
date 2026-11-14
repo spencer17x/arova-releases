@@ -4,7 +4,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-11-02. Covers the current website/service and the beta.11 extension. Website updates do not automatically update the extension.
+Updated: 2026-11-14. Covers the current website/service and the beta.12 extension. Website updates do not automatically update the extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [Features](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.md) · [Home](README.md)
 
@@ -18,7 +18,7 @@ Use `SHA256SUMS` and `release-info.json` to verify the downloaded package and bu
 
 The website and extension share account data but store separate sign-in sessions. Signing in to the extension does not sign you in to the website. On refresh, the website verifies the session before showing the page, then loads account settings separately. Use Reconnect for network errors and Retry for settings errors; sign in again when the session expires.
 
-This guide covers the website and beta.11 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
+This guide covers the website and beta.12 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
 
 ## Quick start
 
@@ -105,7 +105,7 @@ One address across multiple chains uses one slot; pausing releases it. If expiry
 
 When reporting a problem, include the release/build, time, chain and a transaction link where relevant. Redact credentials, private notes, group identifiers and unrelated account data. Never send passwords, keys, cookies or login codes.
 
-Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.11.
+Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.12.
 
 Fomo Signals cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
 
