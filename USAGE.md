@@ -4,7 +4,7 @@
 
 **English** | [简体中文](USAGE.zh-CN.md)
 
-Updated: 2026-11-14. Covers the current website/service and the beta.12 extension. Website updates do not automatically update the extension.
+Updated: 2026-11-16. Covers the current website/service and the beta.13 extension. Website updates do not automatically update the extension.
 
 [Download](https://github.com/spencer17x/arova-releases/releases) · [Features](https://github.com/spencer17x/arova-releases/blob/main/FEATURES.md) · [Home](README.md)
 
@@ -18,7 +18,7 @@ Use `SHA256SUMS` and `release-info.json` to verify the downloaded package and bu
 
 The website and extension share account data but store separate sign-in sessions. Signing in to the extension does not sign you in to the website. On refresh, the website verifies the session before showing the page, then loads account settings separately. Use Reconnect for network errors and Retry for settings errors; sign in again when the session expires.
 
-This guide covers the website and beta.12 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
+This guide covers the website and beta.13 extension, including Fomo Signals, Arova Trend, Growth tracking and current account settings. Check the release page for available downloads. Refresh or force-refresh the website for its current interface. Update extension files using the installation steps above; refreshing the website does not replace them.
 
 ## Quick start
 
@@ -26,12 +26,12 @@ This guide covers the website and beta.12 extension, including Fomo Signals, Aro
 2. In wallet monitoring, add an actual wallet address and optional private note.
 3. Choose the compatible chains and operation types. Start with a small set you can verify.
 4. Check monitoring status and your active-wallet allowance; Arova manages the nodes.
-5. Open a supported XXYY, GMGN or DeBot page and enable the notification panel.
+5. Open a supported GMGN or DeBot page and enable the notification panel.
 6. Configure browser alerts or Telegram destinations separately if needed.
 
 Wallet monitoring does not require a Fomo/Pump login session or private key. A token contract or platform account ID is not a substitute for a wallet address. Existing legacy authorization materials, if present, have a separate explicit cleanup control in account settings; updating the extension does not automatically revoke them.
 
-Fomo Signals reception is managed by Arova. The current client does not show receiver credential controls; choose signal types and notification destinations under Notifications → Telegram notifications. Chain-delay notices appear only for chains where the account has a saved wallet, including a paused wallet, and polling pauses while the browser tab is hidden.
+Fomo Signals reception is managed by Arova. The current client does not show receiver credential controls; choose signal types and notification destinations under Notifications → Telegram notifications. AI signals arrive as trend, early-bird, KOL mention and launched alerts; pick the kinds for each destination there, while the Display settings switches only affect the panel list and browser notifications. Chain-delay notices appear only for chains where the account has a saved wallet, including a paused wallet, and polling pauses while the browser tab is hidden.
 
 ## Wallets, allowances and transaction types
 
@@ -53,7 +53,7 @@ Check both the main notification switch and the destination's enabled state. Eac
 
 ## Trend monitors and Telegram forwarding
 
-**Fomo Signals** highlight smart-wallet activity and are available in public discovery. **Arova Trend** covers trend and anomaly signals for the signed-in account. **Growth tracking** shows subsequent multiple changes relative to the relevant signal baseline; it is not a realized trading return.
+**Fomo Signals** highlight smart-wallet activity and are available in public discovery. **Arova Trend** covers trend and anomaly signals for the signed-in account; delivered trend notifications also appear in the panel under the Arova Trend source and can trigger browser notifications. **Growth tracking** shows subsequent multiple changes relative to the relevant signal baseline; it is not a realized trading return.
 
 Use the dedicated settings to configure trend monitors or forwarding rules. Select supported chains individually or together. Arova Trend notifications use Chinese body text even when the interface is English.
 
@@ -105,7 +105,7 @@ One address across multiple chains uses one slot; pausing releases it. If expiry
 
 When reporting a problem, include the release/build, time, chain and a transaction link where relevant. Redact credentials, private notes, group identifiers and unrelated account data. Never send passwords, keys, cookies or login codes.
 
-Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.12.
+Earlier screenshot assets in this repository depict older clients, including retired authorization flows. They are retained as historical assets and are not instructions for beta.13.
 
 Fomo Signals cards and notifications omit the price row; market cap, growth, contract and original provider text remain available.
 
